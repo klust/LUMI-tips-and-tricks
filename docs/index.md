@@ -7,4 +7,5 @@ web).
 1.  [LMOD](1_LMOD/index.md)
     1.  [Lmod setup](1_LMOD/1_01_LMOD_setup.md)
     2.  [Custom paths](1_LMOD/1_02_custom_paths.md)
-
+2.  [Compilers](2_Compilers/index.md)
+    1.  [Miscellaneous topics](2_Compilers/2_10_misc.md)
