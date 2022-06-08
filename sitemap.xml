@@ -25,4 +25,14 @@
          <lastmod>2022-06-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://klust.github.io/cray-missing-manual/2_Compilers/</loc>
+         <lastmod>2022-06-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://klust.github.io/cray-missing-manual/2_Compilers/2_10_misc/</loc>
+         <lastmod>2022-06-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
