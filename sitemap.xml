@@ -1,38 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://klust.github.io/cray-missing-manual/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/</loc>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/cray-missing-manual/0_00_introduction/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/0_00_introduction/</loc>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/cray-missing-manual/1_LMOD/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/1_LMOD/</loc>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/cray-missing-manual/1_LMOD/1_01_LMOD_setup/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/1_LMOD/1_01_LMOD_setup/</loc>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/cray-missing-manual/1_LMOD/1_02_custom_paths/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/1_LMOD/1_02_custom_paths/</loc>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/cray-missing-manual/2_Compilers/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/2_Compilers/</loc>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/cray-missing-manual/2_Compilers/2_10_misc/</loc>
-         <lastmod>2023-06-20</lastmod>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/2_Compilers/2_10_misc/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/3_Slurm/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/3_Slurm/3_01_Doclinks/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/3_Slurm/3_10_misc/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/4_AI_packages/</loc>
+         <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
