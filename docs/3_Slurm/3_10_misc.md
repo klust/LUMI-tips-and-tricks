@@ -1,0 +1,72 @@
+# Miscellaneous Slurm tips&trics
+
+## System configuration
+
+-   Extensive information about the partitions:
+    ```
+	scontrol show partition --all
+    ```
+	With `--all`` to also see hidden partitions.
+
+-   Show topology:
+    ```
+	scontrol show topology
+    ```
+
+-   Show extensive configuration info:
+    ```
+	scontrol show config
+    ```
+
+-   Also interesting:
+    ```
+	scontrol show assoc_mgr
+    ```
+
+## User- or project-related
+
+-   Show which partitions a project has access to:
+    ```
+	sacctmgr show assoc where account=project_462000087
+    ```
+
+-   Show which partitions a user has access to:
+    ```
+	sacctmgr show assoc format=account,Partition  -p Users=kurtlust
+    ```
+
+## Job management
+
+-   History of slurm jobs:
+	-   Through `sacct`
+	    ```   
+		sacct -a
+	    ```   
+	-   Through `slurm`
+	    ```   
+		slurm history 2hours -a 
+	    ```   
+	    or from a particular user:
+	    ```   
+		slurm history 1day -u <username>
+	    ```   
+
+
+## Misc
+
+		
+
+-   Attach to a running job rather than ssh into a node:
+    ```
+	srun --pty --jobid <jobid> bash
+    ```
+    or
+    ```
+    srun --pty --jobid <jobid> --w <nodename> bash
+    ```
+
+-   Testing on LUMI-D:
+    ```
+	srun -plumid -t30:00 --gres=gpu:1 --pty bash
+    ```
+

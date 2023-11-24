@@ -1,6 +1,6 @@
 site_name: "Information that is missing or hard to find in the Cray PE manual"
-site_url: https://klust.github.io/cray-missing-manual
-site_dir: "site/cray-missing-manual"
+site_url: https://klust.github.io/LUMI-tips-and-tricks
+site_dir: "site/LUMI-tips-and-tricks"
 
 theme:
   name: material
@@ -24,6 +24,12 @@ nav:
   - Compilers:
     - 2_Compilers/index.md
     - Miscellaneous topics: 2_Compilers/2_10_misc.md
+  - Slurm:
+    - 3_Slurm/index.md
+    - Doc links: 3_Slurm/3_01_Doclinks.md
+    - Miscellaneous: 3_Slurm/3_10_misc.md
+  - AI software:
+    - 4_AI_packages/index.md
 
 plugins:
   # show revision date at bottom of each page
