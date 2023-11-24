@@ -18,21 +18,23 @@ theme:
 nav:
   - Home: index.md
   - Compilers:
-    - 1_Compilers/index.md
-    - Miscellaneous topics: 1_Compilers/1_10_misc.md
+    - 01_Compilers/index.md
+    - Documentation: 01_Compilers/01_01_Doclinks.md
+    - Miscellaneous topics: 01_Compilers/01_99_misc.md
   - LMOD:
-    - 2_LMOD/index.md
-    - Lmod setup: 2_LMOD/2_01_LMOD_setup.md
-    - PE module structure: 2_LMOD/2_02_PE_module_structure.md
+    - 02_LMOD/index.md
+    - Dcoumentation: 02_LMOD/02_01_Doclinks.md
+    - Lmod setup: 02_LMOD/02_02_LMOD_setup.md
+    - PE module structure: 02_LMOD/02_03_PE_module_structure.md
   - Slurm:
-    - 3_Slurm/index.md
-    - Doc links: 3_Slurm/3_01_Doclinks.md
-    - Miscellaneous: 3_Slurm/3_10_misc.md
+    - 03_Slurm/index.md
+    - Doc links: 03_Slurm/03_01_Doclinks.md
+    - Miscellaneous: 03_Slurm/03_99_misc.md
   - AI software:
-    - 4_AI_packages/index.md
-  - Linux:
-    - 9_Linux/index.md
-    - Files: 9_Linux/9_01_File_management.md
+    - 04_AI_packages/index.md
+  - Linux and misc:
+    - 99_Linux/index.md
+    - File management: 99_Linux/99_01_File_management.md
 
 plugins:
   # show revision date at bottom of each page
