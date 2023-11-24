@@ -13,3 +13,6 @@ in the documentation.
     1.  [Doc links](3_Slurm/3_01_Doclinks.md)
     2.  [Miscellaneous tips&tricks](3_Slurm/3_10_misc.md)
 4.  [AI software](4_AI_packages/index.md)
+5.  [Linux](9_Linux/index.md)
+    1.  [File management](9_Linux/9_01_File_management.md)
+

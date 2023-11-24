@@ -30,6 +30,9 @@ nav:
     - Miscellaneous: 3_Slurm/3_10_misc.md
   - AI software:
     - 4_AI_packages/index.md
+  - Linux:
+    - 9_Linux/index.md
+    - Files: 9_01_File_management.md
 
 plugins:
   # show revision date at bottom of each page
