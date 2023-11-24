@@ -6,52 +6,72 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/LUMI-tips-and-tricks/0_00_introduction/</loc>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/00_00_introduction/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/LUMI-tips-and-tricks/1_LMOD/</loc>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/01_Compilers/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/LUMI-tips-and-tricks/1_LMOD/1_01_LMOD_setup/</loc>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/01_Compilers/01_01_Doclinks/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/LUMI-tips-and-tricks/1_LMOD/1_02_custom_paths/</loc>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/01_Compilers/01_99_misc/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/LUMI-tips-and-tricks/2_Compilers/</loc>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/02_LMOD/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/LUMI-tips-and-tricks/2_Compilers/2_10_misc/</loc>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/02_LMOD/02_01_Doclinks/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/LUMI-tips-and-tricks/3_Slurm/</loc>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/02_LMOD/02_02_LMOD_setup/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/LUMI-tips-and-tricks/3_Slurm/3_01_Doclinks/</loc>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/02_LMOD/02_03_PE_module_structure/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/LUMI-tips-and-tricks/3_Slurm/3_10_misc/</loc>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/03_Slurm/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/LUMI-tips-and-tricks/4_AI_packages/</loc>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/03_Slurm/03_01_Doclinks/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/03_Slurm/03_99_misc/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/04_AI_packages/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/99_Linux/</loc>
+         <lastmod>2023-11-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/99_Linux/99_01_File_management/</loc>
          <lastmod>2023-11-24</lastmod>
          <changefreq>daily</changefreq>
     </url>

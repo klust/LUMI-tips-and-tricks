@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://klust.github.io/LUMI-tips-and-tricks/3_Slurm/3_10_misc/">
+        <link rel="canonical" href="https://klust.github.io/LUMI-tips-and-tricks/99_Linux/">
       
       
-        <link rel="prev" href="../3_01_Doclinks/">
+        <link rel="prev" href="../04_AI_packages/">
       
       
-        <link rel="next" href="../../4_AI_packages/">
+        <link rel="next" href="99_01_File_management/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.11">
     
     
       
-        <title>Miscellaneous - Information that is missing or hard to find in the Cray PE manual</title>
+        <title>Rather more general Linux tips - Information that is missing or hard to find in the Cray PE manual</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -48,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#miscellaneous-slurm-tipstrics" class="md-skip">
+        <a href="#rather-more-general-linux-tips" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Information that is missing or hard to find in the Cray PE manual" class="md-header__button md-logo" aria-label="Information that is missing or hard to find in the Cray PE manual" data-md-component="logo">
+    <a href=".." title="Information that is missing or hard to find in the Cray PE manual" class="md-header__button md-logo" aria-label="Information that is missing or hard to find in the Cray PE manual" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Miscellaneous
+              Rather more general Linux tips
             
           </span>
         </div>
@@ -197,7 +197,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Information that is missing or hard to find in the Cray PE manual" class="md-nav__button md-logo" aria-label="Information that is missing or hard to find in the Cray PE manual" data-md-component="logo">
+    <a href=".." title="Information that is missing or hard to find in the Cray PE manual" class="md-nav__button md-logo" aria-label="Information that is missing or hard to find in the Cray PE manual" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -214,7 +214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -257,11 +257,11 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../1_LMOD/" class="md-nav__link ">
+            <a href="../01_Compilers/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
-    LMOD
+    Compilers
   </span>
   
 
@@ -277,107 +277,6 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            LMOD
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../1_LMOD/1_01_LMOD_setup/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Lmod setup
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../1_LMOD/1_02_custom_paths/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Custom paths
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../2_Compilers/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Compilers
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
             Compilers
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
@@ -390,7 +289,27 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2_Compilers/2_10_misc/" class="md-nav__link">
+      <a href="../01_Compilers/01_01_Doclinks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_Compilers/01_99_misc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -415,8 +334,6 @@
       
   
   
-    
-  
   
     
     
@@ -429,21 +346,146 @@
       
         
       
+        
+      
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../02_LMOD/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    LMOD
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            LMOD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_LMOD/02_01_Doclinks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dcoumentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_LMOD/02_02_LMOD_setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lmod setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_LMOD/02_03_PE_module_structure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PE module structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../03_Slurm/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -460,7 +502,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Slurm
@@ -475,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3_01_Doclinks/" class="md-nav__link">
+      <a href="../03_Slurm/03_01_Doclinks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -493,29 +535,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Miscellaneous
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../03_Slurm/03_99_misc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -524,62 +546,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#system-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      System configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-or-project-related" class="md-nav__link">
-    <span class="md-ellipsis">
-      User- or project-related
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#job-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      Job management
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#misc" class="md-nav__link">
-    <span class="md-ellipsis">
-      Misc
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -618,7 +584,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../4_AI_packages/" class="md-nav__link ">
+            <a href="../04_AI_packages/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -637,6 +603,89 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  <span class="md-ellipsis">
+    Linux and misc
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Linux and misc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="99_01_File_management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -666,50 +715,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#system-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      System configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#user-or-project-related" class="md-nav__link">
-    <span class="md-ellipsis">
-      User- or project-related
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#job-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      Job management
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#misc" class="md-nav__link">
-    <span class="md-ellipsis">
-      Misc
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -723,74 +728,9 @@
                   
 
 
-<h1 id="miscellaneous-slurm-tipstrics">Miscellaneous Slurm tips&amp;trics<a class="headerlink" href="#miscellaneous-slurm-tipstrics" title="Permanent link">&para;</a></h1>
-<h2 id="system-configuration">System configuration<a class="headerlink" href="#system-configuration" title="Permanent link">&para;</a></h2>
+<h1 id="rather-more-general-linux-tips">Rather more general Linux tips<a class="headerlink" href="#rather-more-general-linux-tips" title="Permanent link">&para;</a></h1>
 <ul>
-<li>
-<p>Extensive information about the partitions:
-    <div class="highlight"><pre><span></span><code>scontrol show partition --all
-</code></pre></div>
-    With `--all`` to also see hidden partitions.</p>
-</li>
-<li>
-<p>Show topology:
-    <div class="highlight"><pre><span></span><code>scontrol show topology
-</code></pre></div></p>
-</li>
-<li>
-<p>Show extensive configuration info:
-    <div class="highlight"><pre><span></span><code>scontrol show config
-</code></pre></div></p>
-</li>
-<li>
-<p>Also interesting:
-    <div class="highlight"><pre><span></span><code>scontrol show assoc_mgr
-</code></pre></div></p>
-</li>
-</ul>
-<h2 id="user-or-project-related">User- or project-related<a class="headerlink" href="#user-or-project-related" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p>Show which partitions a project has access to:
-    <div class="highlight"><pre><span></span><code>sacctmgr show assoc where account=project_462000087
-</code></pre></div></p>
-</li>
-<li>
-<p>Show which partitions a user has access to:
-    <div class="highlight"><pre><span></span><code>sacctmgr show assoc format=account,Partition  -p Users=kurtlust
-</code></pre></div></p>
-</li>
-</ul>
-<h2 id="job-management">Job management<a class="headerlink" href="#job-management" title="Permanent link">&para;</a></h2>
-<ul>
-<li>History of slurm jobs:<ul>
-<li>Through <code>sacct</code>
-    <div class="highlight"><pre><span></span><code>sacct -a
-</code></pre></div></li>
-<li>Through <code>slurm</code>
-    <div class="highlight"><pre><span></span><code>slurm history 2hours -a 
-</code></pre></div>
-    or from a particular user:
-    <div class="highlight"><pre><span></span><code>slurm history 1day -u &lt;username&gt;
-</code></pre></div></li>
-</ul>
-</li>
-</ul>
-<h2 id="misc">Misc<a class="headerlink" href="#misc" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p>Attach to a running job rather than ssh into a node:
-    <div class="highlight"><pre><span></span><code>srun --pty --jobid &lt;jobid&gt; bash
-</code></pre></div>
-    or
-    <div class="highlight"><pre><span></span><code>srun --pty --jobid &lt;jobid&gt; --w &lt;nodename&gt; bash
-</code></pre></div></p>
-</li>
-<li>
-<p>Testing on LUMI-D:
-    <div class="highlight"><pre><span></span><code>srun -plumid -t30:00 --gres=gpu:1 --pty bash
-</code></pre></div></p>
-</li>
+<li><a href="99_01_File_management/">File management</a></li>
 </ul>
 
   <hr>
@@ -862,10 +802,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.indexes", "header.autohide", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.indexes", "header.autohide", "toc.follow"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      <script src="../assets/javascripts/bundle.6c14ae12.min.js"></script>
       
     
   </body>
