@@ -4,11 +4,11 @@ This unofficial site contains things I discovered in the HPE-Cray PE or other so
 but have trouble finding in the documentation or is too specialised or anecdotal to have a place
 in the documentation.
 
-1.  [LMOD](1_LMOD/index.md)
-    1.  [Lmod setup](1_LMOD/1_01_LMOD_setup.md)
-    2.  [Custom paths](1_LMOD/1_02_custom_paths.md)
-2.  [Compilers](2_Compilers/index.md)
-    1.  [Miscellaneous topics](2_Compilers/2_10_misc.md)
+1.  [Compilers](1_Compilers/index.md)
+    1.  [Miscellaneous topics](1_Compilers/1_10_misc.md)
+2.  [LMOD](2_LMOD/index.md)
+    1.  [Lmod setup](2_LMOD/2_01_LMOD_setup.md)
+    2.  [PE module structure](2_LMOD/2_02_PE_module_structure.md)
 3.  [Slurm](3_Slurm/index.md)
     1.  [Doc links](3_Slurm/3_01_Doclinks.md)
     2.  [Miscellaneous tips&tricks](3_Slurm/3_10_misc.md)

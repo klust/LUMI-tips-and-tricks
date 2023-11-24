@@ -17,13 +17,13 @@ theme:
 
 nav:
   - Home: index.md
-  - LMOD:
-    - 1_LMOD/index.md
-    - Lmod setup: 1_LMOD/1_01_LMOD_setup.md
-    - Custom paths: 1_LMOD/1_02_custom_paths.md
   - Compilers:
-    - 2_Compilers/index.md
-    - Miscellaneous topics: 2_Compilers/2_10_misc.md
+    - 1_Compilers/index.md
+    - Miscellaneous topics: 1_Compilers/1_10_misc.md
+  - LMOD:
+    - 2_LMOD/index.md
+    - Lmod setup: 2_LMOD/2_01_LMOD_setup.md
+    - PE module structure: 2_LMOD/2_02_PE_module_structure.md
   - Slurm:
     - 3_Slurm/index.md
     - Doc links: 3_Slurm/3_01_Doclinks.md
@@ -32,7 +32,7 @@ nav:
     - 4_AI_packages/index.md
   - Linux:
     - 9_Linux/index.md
-    - Files: 9_01_File_management.md
+    - Files: 9_Linux/9_01_File_management.md
 
 plugins:
   # show revision date at bottom of each page
