@@ -15,6 +15,10 @@ in the documentation.
     1.  [Doc links](03_Slurm/03_01_Doclinks.md)
     2.  [Miscellaneous tips&tricks](03_Slurm/03_99_misc.md)
 4.  [AI software](04_AI_packages/index.md)
-5.  [Linux](99_Linux/index.md)
+5.  [MPI](05_MPI/index.md)
+    1.  [Cray MPICH tips&tricks](05_MPI/05_01_Cray_MPICH_tips.md)
+    2.  [Open MPI](05_MPI/05_02_OpenMPI.md)
+    3.  [OSU micro-benchmarks](05_MPI/05_03_OSU_benchmarks.md)
+6.  [Linux](99_Linux/index.md)
     1.  [File management](99_Linux/99_01_File_management.md)
 
