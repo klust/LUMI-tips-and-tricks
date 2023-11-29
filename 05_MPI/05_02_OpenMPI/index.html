@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://klust.github.io/LUMI-tips-and-tricks/01_Compilers/01_99_misc/">
+        <link rel="canonical" href="https://klust.github.io/LUMI-tips-and-tricks/05_MPI/05_02_OpenMPI/">
       
       
-        <link rel="prev" href="../01_01_Doclinks/">
+        <link rel="prev" href="../05_01_Cray_MPICH_tips/">
       
       
-        <link rel="next" href="../../02_LMOD/">
+        <link rel="next" href="../05_03_OSU_benchmarks/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Miscellaneous topics - Information that is missing or hard to find in the Cray PE manual</title>
+        <title>Open MPI - Information that is missing or hard to find in the Cray PE manual</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#miscellaneous-topics" class="md-skip">
+        <a href="#open-mpi-on-lumi" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Miscellaneous topics
+              Open MPI
             
           </span>
         </div>
@@ -231,8 +231,6 @@
       
   
   
-    
-  
   
     
     
@@ -249,17 +247,17 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../01_Compilers/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -276,7 +274,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Compilers
@@ -291,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_01_Doclinks/" class="md-nav__link">
+      <a href="../../01_Compilers/01_01_Doclinks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -309,29 +307,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Miscellaneous topics
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../01_Compilers/01_99_misc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -340,35 +318,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#using-the-compilers-without-the-wrappers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using the compilers without the wrappers
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -667,6 +616,8 @@
       
   
   
+    
+  
   
     
     
@@ -685,17 +636,17 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../05_MPI/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -712,7 +663,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             MPI
@@ -727,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05_MPI/05_01_Cray_MPICH_tips/" class="md-nav__link">
+      <a href="../05_01_Cray_MPICH_tips/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -745,9 +696,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../05_MPI/05_02_OpenMPI/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Open MPI
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -756,6 +727,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#build-instructions-alfio-from-the-hackathon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build instructions Alfio from the hackathon
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-mpi-5-for-slingshot-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open MPI 5 for Slingshot 11
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -767,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05_MPI/05_03_OSU_benchmarks/" class="md-nav__link">
+      <a href="../05_03_OSU_benchmarks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -896,9 +905,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#using-the-compilers-without-the-wrappers" class="md-nav__link">
+  <a href="#build-instructions-alfio-from-the-hackathon" class="md-nav__link">
     <span class="md-ellipsis">
-      Using the compilers without the wrappers
+      Build instructions Alfio from the hackathon
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-mpi-5-for-slingshot-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open MPI 5 for Slingshot 11
     </span>
   </a>
   
@@ -919,61 +937,62 @@
                   
 
 
-<h1 id="miscellaneous-topics">Miscellaneous topics<a class="headerlink" href="#miscellaneous-topics" title="Permanent link">&para;</a></h1>
-<h2 id="using-the-compilers-without-the-wrappers">Using the compilers without the wrappers<a class="headerlink" href="#using-the-compilers-without-the-wrappers" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Compiler module</th>
-<th style="text-align: left;">C compiler</th>
-<th style="text-align: left;">C++ compiler</th>
-<th style="text-align: left;">Fortran fixed format</th>
-<th style="text-align: left;">Fortran free format</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">cce</td>
-<td style="text-align: left;"><code>craycc</code>, <code>clang</code></td>
-<td style="text-align: left;"><code>crayCC</code>, <code>craycxx</code>, <code>clang++</code></td>
-<td style="text-align: left;"><code>crayftn</code></td>
-<td style="text-align: left;"><code>crayftn</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">gcc</td>
-<td style="text-align: left;"><code>gcc</code></td>
-<td style="text-align: left;"><code>g++</code></td>
-<td style="text-align: left;"><code>gfortran</code></td>
-<td style="text-align: left;"><code>gfortran</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">aocc</td>
-<td style="text-align: left;"><code>clang</code></td>
-<td style="text-align: left;"><code>clang++</code></td>
-<td style="text-align: left;"><code>flang</code></td>
-<td style="text-align: left;"><code>flang</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">rocm</td>
-<td style="text-align: left;"><code>amdclang</code></td>
-<td style="text-align: left;"><code>amdclang++</code></td>
-<td style="text-align: left;"><code>amdflang</code></td>
-<td style="text-align: left;"><code>amdflang</code></td>
-</tr>
-</tbody>
-</table>
-<p>Remarks</p>
+<h1 id="open-mpi-on-lumi">Open MPI on LUMI<a class="headerlink" href="#open-mpi-on-lumi" title="Permanent link">&para;</a></h1>
+<h2 id="build-instructions-alfio-from-the-hackathon">Build instructions Alfio from the hackathon<a class="headerlink" href="#build-instructions-alfio-from-the-hackathon" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>module load PrgEnv-gnu
+module unload cray-mpich
+OMPI_VERSION=4.1.6
+echo &quot;Install OpenMPI v&quot;$OMPI_VERSION
+wget https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-$OMPI_VERSION.tar.bz2
+tar xf openmpi-$OMPI_VERSION.tar.bz2 &amp;&amp; rm openmpi-$OMPI_VERSION.tar.bz2
+cd openmpi-$OMPI_VERSION
+
+# SLURM (default yes), OFI, PMI
+make clean
+./configure --prefix=$PWD/install_ofi_slurm_pmi/ \
+--with-ofi=/opt/cray/libfabric/1.15.2.0 --with-slurm --with-pmi=/usr CC=gcc CXX=g++ FTN=gfortran CFLAGS=&quot;-march=znver2&quot; \
+--disable-shared --enable-static
+make -j 10 install
+
+rm -f install
+ln -s $PWD/install_ofi_slurm_pmi install
+
+module unload cray-mpich
+export PATH=$PWD/install/bin/:$PATH
+export LD_LIBRARY_PATH=$PWD/install/lib:$LD_LIBRARY_PATH
+
+# Test with OSU
+wget https://mvapich.cse.ohio-state.edu/download/mvapich/osu-micro-benchmarks-5.9.tar.gz
+tar xf osu-micro-benchmarks-5.9.tar.gz
+rm osu-micro-benchmarks-5.9.tar.gz
+cd osu-micro-benchmarks-5.9
+
+./configure --prefix=$PWD/install CC=$(which mpicc) CXX=$(which mpicxx) CFLAGS=-O3 CXXFLAGS=-O3
+make -j 10 install
+
+cd install/libexec/osu-micro-benchmarks/mpi/p2p 
+srun -n 2 --ntasks-per-node=1 ./osu_bw
+
+# Cannot remember the performance, try to compare to cray-mpich
+</code></pre></div>
+<p>It looks like you can now safely build shared libraries though.</p>
+<p>Useful links:</p>
+<ul>
+<li><a href="https://docs.nersc.gov/development/programming-models/mpi/openmpi/">Use at NERSC</a></li>
+</ul>
+<h2 id="open-mpi-5-for-slingshot-11">Open MPI 5 for Slingshot 11<a class="headerlink" href="#open-mpi-5-for-slingshot-11" title="Permanent link">&para;</a></h2>
+<p>Useful links:</p>
 <ul>
 <li>
-<p>The Cray clang compilers need to be pointed to the version of gcc to use using the
-    <code>--gcc-toolchain=&lt;value&gt;</code> option. The wrapper adds something like
-    <code>--gcc-toolchain=/opt/cray/pe/gcc/8.1.0/snos</code>.
-    Otherwise the compile will fail to find a suitable set of include files.</p>
-<p>TODO: Test this.</p>
+<p><a href="https://www.osti.gov/biblio/1997634">CUG paper ORNL</a></p>
+<p>The paper says that changes needed in Open MPI itself are present in the Open MPI main and v5.0.x branches,
+but not in branches for older versions.</p>
+<p>One problem with Open MPI on OFI+CXI was that the CXI provider has no special pathway for intra-node messaging.
+Rather than redeveloping the MTL to deal with multiple components concurrently, a new provider was made, LINKx,
+encapsulating CXI but adding the missing features.</p>
 </li>
 <li>
-<p>A good trick to figure out which options the PE wrappers add is to use the
-    <code>-craype-verbose</code> flag on the command line of the wrappers.</p>
+<p><a href="https://docs.nersc.gov/development/programming-models/mpi/openmpi/">Use at NERSC</a></p>
 </li>
 </ul>
 
@@ -982,7 +1001,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 29, 2023</span>
       
     
   </small>

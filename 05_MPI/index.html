@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://klust.github.io/LUMI-tips-and-tricks/01_Compilers/01_99_misc/">
+        <link rel="canonical" href="https://klust.github.io/LUMI-tips-and-tricks/05_MPI/">
       
       
-        <link rel="prev" href="../01_01_Doclinks/">
+        <link rel="prev" href="../04_AI_packages/">
       
       
-        <link rel="next" href="../../02_LMOD/">
+        <link rel="next" href="05_01_Cray_MPICH_tips/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.11">
     
     
       
-        <title>Miscellaneous topics - Information that is missing or hard to find in the Cray PE manual</title>
+        <title>MPI - Information that is missing or hard to find in the Cray PE manual</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -48,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#miscellaneous-topics" class="md-skip">
+        <a href="#mpi" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Information that is missing or hard to find in the Cray PE manual" class="md-header__button md-logo" aria-label="Information that is missing or hard to find in the Cray PE manual" data-md-component="logo">
+    <a href=".." title="Information that is missing or hard to find in the Cray PE manual" class="md-header__button md-logo" aria-label="Information that is missing or hard to find in the Cray PE manual" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Miscellaneous topics
+              MPI
             
           </span>
         </div>
@@ -197,7 +197,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Information that is missing or hard to find in the Cray PE manual" class="md-nav__button md-logo" aria-label="Information that is missing or hard to find in the Cray PE manual" data-md-component="logo">
+    <a href=".." title="Information that is missing or hard to find in the Cray PE manual" class="md-nav__button md-logo" aria-label="Information that is missing or hard to find in the Cray PE manual" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -214,7 +214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -231,8 +231,6 @@
       
   
   
-    
-  
   
     
     
@@ -249,17 +247,17 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../01_Compilers/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -276,7 +274,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Compilers
@@ -291,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_01_Doclinks/" class="md-nav__link">
+      <a href="../01_Compilers/01_01_Doclinks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -309,29 +307,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Miscellaneous topics
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../01_Compilers/01_99_misc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -340,35 +318,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#using-the-compilers-without-the-wrappers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using the compilers without the wrappers
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -413,7 +362,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../02_LMOD/" class="md-nav__link ">
+            <a href="../02_LMOD/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -445,7 +394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02_LMOD/02_01_Doclinks/" class="md-nav__link">
+      <a href="../02_LMOD/02_01_Doclinks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -465,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02_LMOD/02_02_LMOD_setup/" class="md-nav__link">
+      <a href="../02_LMOD/02_02_LMOD_setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -485,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02_LMOD/02_03_PE_module_structure/" class="md-nav__link">
+      <a href="../02_LMOD/02_03_PE_module_structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -536,7 +485,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../03_Slurm/" class="md-nav__link ">
+            <a href="../03_Slurm/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -568,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03_Slurm/03_01_Doclinks/" class="md-nav__link">
+      <a href="../03_Slurm/03_01_Doclinks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -588,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03_Slurm/03_99_misc/" class="md-nav__link">
+      <a href="../03_Slurm/03_99_misc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -635,7 +584,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../04_AI_packages/" class="md-nav__link ">
+            <a href="../04_AI_packages/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -667,6 +616,8 @@
       
   
   
+    
+  
   
     
     
@@ -685,17 +636,17 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../05_MPI/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   <span class="md-ellipsis">
@@ -706,13 +657,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+              <label class="md-nav__link md-nav__link--active" for="__nav_6" id="__nav_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             MPI
@@ -727,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05_MPI/05_01_Cray_MPICH_tips/" class="md-nav__link">
+      <a href="05_01_Cray_MPICH_tips/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -747,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05_MPI/05_02_OpenMPI/" class="md-nav__link">
+      <a href="05_02_OpenMPI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -767,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05_MPI/05_03_OSU_benchmarks/" class="md-nav__link">
+      <a href="05_03_OSU_benchmarks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -816,7 +767,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../99_Linux/" class="md-nav__link ">
+            <a href="../99_Linux/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -848,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../99_Linux/99_01_File_management/" class="md-nav__link">
+      <a href="../99_Linux/99_01_File_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -889,23 +840,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#using-the-compilers-without-the-wrappers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using the compilers without the wrappers
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -919,61 +853,16 @@
                   
 
 
-<h1 id="miscellaneous-topics">Miscellaneous topics<a class="headerlink" href="#miscellaneous-topics" title="Permanent link">&para;</a></h1>
-<h2 id="using-the-compilers-without-the-wrappers">Using the compilers without the wrappers<a class="headerlink" href="#using-the-compilers-without-the-wrappers" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Compiler module</th>
-<th style="text-align: left;">C compiler</th>
-<th style="text-align: left;">C++ compiler</th>
-<th style="text-align: left;">Fortran fixed format</th>
-<th style="text-align: left;">Fortran free format</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">cce</td>
-<td style="text-align: left;"><code>craycc</code>, <code>clang</code></td>
-<td style="text-align: left;"><code>crayCC</code>, <code>craycxx</code>, <code>clang++</code></td>
-<td style="text-align: left;"><code>crayftn</code></td>
-<td style="text-align: left;"><code>crayftn</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">gcc</td>
-<td style="text-align: left;"><code>gcc</code></td>
-<td style="text-align: left;"><code>g++</code></td>
-<td style="text-align: left;"><code>gfortran</code></td>
-<td style="text-align: left;"><code>gfortran</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">aocc</td>
-<td style="text-align: left;"><code>clang</code></td>
-<td style="text-align: left;"><code>clang++</code></td>
-<td style="text-align: left;"><code>flang</code></td>
-<td style="text-align: left;"><code>flang</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">rocm</td>
-<td style="text-align: left;"><code>amdclang</code></td>
-<td style="text-align: left;"><code>amdclang++</code></td>
-<td style="text-align: left;"><code>amdflang</code></td>
-<td style="text-align: left;"><code>amdflang</code></td>
-</tr>
-</tbody>
-</table>
-<p>Remarks</p>
+<h1 id="mpi">MPI<a class="headerlink" href="#mpi" title="Permanent link">&para;</a></h1>
 <ul>
 <li>
-<p>The Cray clang compilers need to be pointed to the version of gcc to use using the
-    <code>--gcc-toolchain=&lt;value&gt;</code> option. The wrapper adds something like
-    <code>--gcc-toolchain=/opt/cray/pe/gcc/8.1.0/snos</code>.
-    Otherwise the compile will fail to find a suitable set of include files.</p>
-<p>TODO: Test this.</p>
+<p><a href="05_01_Cray_MPICH_tips/">Cray MPICH tips&amp;tricks</a></p>
 </li>
 <li>
-<p>A good trick to figure out which options the PE wrappers add is to use the
-    <code>-craype-verbose</code> flag on the command line of the wrappers.</p>
+<p><a href="05_02_OpenMPI/">Open MPI</a></p>
+</li>
+<li>
+<p><a href="05_03_OSU_benchmarks/">OSU micro-benchmarks</a></p>
 </li>
 </ul>
 
@@ -982,7 +871,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 29, 2023</span>
       
     
   </small>
@@ -1046,10 +935,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.indexes", "header.autohide", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.indexes", "header.autohide", "toc.follow"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      <script src="../assets/javascripts/bundle.6c14ae12.min.js"></script>
       
     
   </body>
