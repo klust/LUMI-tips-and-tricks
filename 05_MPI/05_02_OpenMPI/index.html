@@ -761,6 +761,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#open-mpi-with-spack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open MPI with Spack
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -922,6 +931,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#open-mpi-with-spack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open MPI with Spack
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -995,13 +1013,32 @@ encapsulating CXI but adding the missing features.</p>
 <p><a href="https://docs.nersc.gov/development/programming-models/mpi/openmpi/">Use at NERSC</a></p>
 </li>
 </ul>
+<h2 id="open-mpi-with-spack">Open MPI with Spack<a class="headerlink" href="#open-mpi-with-spack" title="Permanent link">&para;</a></h2>
+<p>Spack needs to be told how to use the proper libfabric library.</p>
+<p>A user gave some information in <a href="https://rt.lumi-supercomputer.eu/Ticket/Display.html?id=3228">ticket #3228</a>
+on how they did it:</p>
+<ul>
+<li>
+<p>Add to the spack.yaml file:</p>
+<div class="highlight"><pre><span></span><code>packages:
+  libfabric:
+    externals:
+      - spec: libfabric@1.15.2.0
+        prefix: /opt/cray/libfabric/1.15.2.0
+</code></pre></div>
+<p>I guess this could go in <code>/etc/spack/packages.yaml</code> in the Spack installation itself.</p>
+</li>
+<li>
+<p>When calling Spack to build Open MPI, specify <code>^libfabric@1.15.2.0</code>.</p>
+</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 29, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 8, 2023</span>
       
     
   </small>
