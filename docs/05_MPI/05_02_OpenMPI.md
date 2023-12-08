@@ -62,3 +62,26 @@ Useful links:
     encapsulating CXI but adding the missing features.
 
 -   [Use at NERSC](https://docs.nersc.gov/development/programming-models/mpi/openmpi/)
+
+
+## Open MPI with Spack
+
+Spack needs to be told how to use the proper libfabric library.
+
+A user gave some information in [ticket #3228](https://rt.lumi-supercomputer.eu/Ticket/Display.html?id=3228)
+on how they did it:
+
+-   Add to the spack.yaml file:
+
+    ```
+    packages:
+      libfabric:
+        externals:
+          - spec: libfabric@1.15.2.0
+            prefix: /opt/cray/libfabric/1.15.2.0
+    ```
+
+    I guess this could go in `/etc/spack/packages.yaml` in the Spack installation itself.
+
+-   When calling Spack to build Open MPI, specify `^libfabric@1.15.2.0`.
+
