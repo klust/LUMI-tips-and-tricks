@@ -40,6 +40,7 @@ nav:
   - Linux and misc:
     - 99_Linux/index.md
     - File management: 99_Linux/99_01_File_management.md
+  - Doc links from course: Doclinks.md
 
 plugins:
   # show revision date at bottom of each page

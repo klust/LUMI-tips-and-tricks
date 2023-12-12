@@ -4,6 +4,8 @@ This unofficial site contains things I discovered in the HPE-Cray PE or other so
 but have trouble finding in the documentation or is too specialised or anecdotal to have a place
 in the documentation.
 
+[Documentation links page maintained for the course pages](Doclinks.md)
+
 1.  [Compilers](01_Compilers/index.md)
     1.  [Documentation for the compilers](01_Compilers/01_01_Doclinks.md)
     2.  [Miscellaneous topics](01_Compilers/01_99_misc.md)
