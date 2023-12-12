@@ -732,6 +732,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ofi-error-messages-and-potential-workarounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      OFI error messages and potential workarounds
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-mpi-error-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other MPI error messages
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -869,6 +887,25 @@
   
 
     
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Doclinks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Doc links from course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -904,6 +941,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ofi-error-messages-and-potential-workarounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      OFI error messages and potential workarounds
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-mpi-error-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other MPI error messages
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -930,6 +985,48 @@
 <div class="highlight"><pre><span></span><code>export MPICH_SMP_SINGLE_COPY_MODE=NONE
 </code></pre></div>
 <p>at least for large message sizes.</p>
+<p>(Partly) documented in <a href="https://cpe.ext.hpe.com/docs/mpt/mpich/intro_mpi.html#smp-environment-variables">the <code>intro_mpi</code> man page</a>.</p>
+</li>
+</ul>
+<h2 id="ofi-error-messages-and-potential-workarounds">OFI error messages and potential workarounds<a class="headerlink" href="#ofi-error-messages-and-potential-workarounds" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><code>PLTE_NOT_FOUND</code></p>
+<p>Error messgage:</p>
+<div class="highlight"><pre><span></span><code>MPIDI_OFI_handle_cq_error(1062): OFI poll failed (ofi_events.c:1064:MPIDI_OFI_handle_cq_error:Input/output error - PTLTE_NOT_FOUND)
+</code></pre></div>
+<p>HPE Cray recommendation:</p>
+<div class="highlight"><pre><span></span><code>export FI_CXI_MSG_OFFLOAD=0
+export FI_CXI_REQ_BUF_COUNT=200
+</code></pre></div>
+<p>These are undocumented environment variables.</p>
+</li>
+</ul>
+<h2 id="other-mpi-error-messages">Other MPI error messages<a class="headerlink" href="#other-mpi-error-messages" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><code>xpmem_attache failed on</code></p>
+<p>Error message:</p>
+<div class="highlight"><pre><span></span><code>MPIDI_CRAY_XPMEM_do_attach(482)...........: xpmem_attach failed on rank 5 (src_rank 20, vaddr 0x3abf5b20, len 2400)
+</code></pre></div>
+<p>It is a memory registration cache bug. The default MR monitor is known to be buggy. The memory registration cache keeps track of what memory regions have been pinned and mapped to the network interface. A bug in the registration cache monitor can have some unexpected side effects, like memory regions deallocated by the code might not be correctly unregistered, which can result in future buffers that share the same virtual addresses being mapped incorrectly or thrown back. Steve Abbott (HPE Frontier support) thinks memhooks is better but hasn't gotten much testing yet, and long term (towards the end of 2023) HPE intends to implement a solution that makes it irrelevant and is better all around.</p>
+<p>Solutions:</p>
+<ul>
+<li>
+<p>Preferred: </p>
+<div class="highlight"><pre><span></span><code>export FI_MR_CACHE_MONITOR=memhooks
+</code></pre></div>
+<p>to use the memhooks memory monitor.</p>
+<p>Undocumented (or has this become irrelevant in the current versions)?</p>
+</li>
+<li>
+<p>Alternative:</p>
+<div class="highlight"><pre><span></span><code>export FI_MR_CACHE_MAX_COUNT=0
+</code></pre></div>
+<p>which turns off the memory registration cache all together but mibht be pretty punishing on performance (code-dependent).</p>
+<p>Documented in <a href="https://cpe.ext.hpe.com/docs/mpt/mpich/intro_mpi.html">the <code>intro_mpi</code> man page</a>.</p>
+</li>
+</ul>
 </li>
 </ul>
 
@@ -938,7 +1035,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 29, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 12, 2023</span>
       
     
   </small>
