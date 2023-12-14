@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://klust.github.io/LUMI-tips-and-tricks/05_MPI/05_02_OpenMPI/">
+        <link rel="canonical" href="https://klust.github.io/LUMI-tips-and-tricks/06_Lustre/">
       
       
-        <link rel="prev" href="../05_01_Cray_MPICH_tips/">
+        <link rel="prev" href="../05_MPI/05_03_OSU_benchmarks/">
       
       
-        <link rel="next" href="../05_03_OSU_benchmarks/">
+        <link rel="next" href="06_99_misc/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.11">
     
     
       
-        <title>Open MPI - Information that is missing or hard to find in the Cray PE manual</title>
+        <title>Lustre - Information that is missing or hard to find in the Cray PE manual</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -48,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#open-mpi-on-lumi" class="md-skip">
+        <a href="#lustre" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Information that is missing or hard to find in the Cray PE manual" class="md-header__button md-logo" aria-label="Information that is missing or hard to find in the Cray PE manual" data-md-component="logo">
+    <a href=".." title="Information that is missing or hard to find in the Cray PE manual" class="md-header__button md-logo" aria-label="Information that is missing or hard to find in the Cray PE manual" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Open MPI
+              Lustre
             
           </span>
         </div>
@@ -197,7 +197,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Information that is missing or hard to find in the Cray PE manual" class="md-nav__button md-logo" aria-label="Information that is missing or hard to find in the Cray PE manual" data-md-component="logo">
+    <a href=".." title="Information that is missing or hard to find in the Cray PE manual" class="md-nav__button md-logo" aria-label="Information that is missing or hard to find in the Cray PE manual" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -214,7 +214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -257,7 +257,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../01_Compilers/" class="md-nav__link ">
+            <a href="../01_Compilers/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -289,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01_Compilers/01_01_Doclinks/" class="md-nav__link">
+      <a href="../01_Compilers/01_01_Doclinks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -309,7 +309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01_Compilers/01_99_misc/" class="md-nav__link">
+      <a href="../01_Compilers/01_99_misc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -362,7 +362,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../02_LMOD/" class="md-nav__link ">
+            <a href="../02_LMOD/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -394,7 +394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02_LMOD/02_01_Doclinks/" class="md-nav__link">
+      <a href="../02_LMOD/02_01_Doclinks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -414,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02_LMOD/02_02_LMOD_setup/" class="md-nav__link">
+      <a href="../02_LMOD/02_02_LMOD_setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -434,7 +434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02_LMOD/02_03_PE_module_structure/" class="md-nav__link">
+      <a href="../02_LMOD/02_03_PE_module_structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -485,7 +485,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../03_Slurm/" class="md-nav__link ">
+            <a href="../03_Slurm/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -517,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03_Slurm/03_01_Doclinks/" class="md-nav__link">
+      <a href="../03_Slurm/03_01_Doclinks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -537,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03_Slurm/03_99_misc/" class="md-nav__link">
+      <a href="../03_Slurm/03_99_misc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -584,7 +584,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../04_AI_packages/" class="md-nav__link ">
+            <a href="../04_AI_packages/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -616,8 +616,6 @@
       
   
   
-    
-  
   
     
     
@@ -636,17 +634,17 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../05_MPI/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -663,7 +661,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             MPI
@@ -678,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05_01_Cray_MPICH_tips/" class="md-nav__link">
+      <a href="../05_MPI/05_01_Cray_MPICH_tips/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -696,29 +694,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Open MPI
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../05_MPI/05_02_OpenMPI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -727,53 +705,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#build-instructions-alfio-from-the-hackathon" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build instructions Alfio from the hackathon
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#open-mpi-5-for-slingshot-11" class="md-nav__link">
-    <span class="md-ellipsis">
-      Open MPI 5 for Slingshot 11
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#open-mpi-with-spack" class="md-nav__link">
-    <span class="md-ellipsis">
-      Open MPI with Spack
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -785,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05_03_OSU_benchmarks/" class="md-nav__link">
+      <a href="../05_MPI/05_03_OSU_benchmarks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -810,6 +741,8 @@
       
   
   
+    
+  
   
     
     
@@ -824,17 +757,17 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../06_Lustre/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   <span class="md-ellipsis">
@@ -845,13 +778,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+              <label class="md-nav__link md-nav__link--active" for="__nav_7" id="__nav_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Lustre
@@ -866,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06_Lustre/06_99_misc/" class="md-nav__link">
+      <a href="06_99_misc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -915,7 +848,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../99_Linux/" class="md-nav__link ">
+            <a href="../99_Linux/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -947,7 +880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../99_Linux/99_01_File_management/" class="md-nav__link">
+      <a href="../99_Linux/99_01_File_management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -974,7 +907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Doclinks/" class="md-nav__link">
+      <a href="../Doclinks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1007,41 +940,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#build-instructions-alfio-from-the-hackathon" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build instructions Alfio from the hackathon
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#open-mpi-5-for-slingshot-11" class="md-nav__link">
-    <span class="md-ellipsis">
-      Open MPI 5 for Slingshot 11
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#open-mpi-with-spack" class="md-nav__link">
-    <span class="md-ellipsis">
-      Open MPI with Spack
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1055,82 +953,9 @@
                   
 
 
-<h1 id="open-mpi-on-lumi">Open MPI on LUMI<a class="headerlink" href="#open-mpi-on-lumi" title="Permanent link">&para;</a></h1>
-<h2 id="build-instructions-alfio-from-the-hackathon">Build instructions Alfio from the hackathon<a class="headerlink" href="#build-instructions-alfio-from-the-hackathon" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>module load PrgEnv-gnu
-module unload cray-mpich
-OMPI_VERSION=4.1.6
-echo &quot;Install OpenMPI v&quot;$OMPI_VERSION
-wget https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-$OMPI_VERSION.tar.bz2
-tar xf openmpi-$OMPI_VERSION.tar.bz2 &amp;&amp; rm openmpi-$OMPI_VERSION.tar.bz2
-cd openmpi-$OMPI_VERSION
-
-# SLURM (default yes), OFI, PMI
-make clean
-./configure --prefix=$PWD/install_ofi_slurm_pmi/ \
---with-ofi=/opt/cray/libfabric/1.15.2.0 --with-slurm --with-pmi=/usr CC=gcc CXX=g++ FTN=gfortran CFLAGS=&quot;-march=znver2&quot; \
---disable-shared --enable-static
-make -j 10 install
-
-rm -f install
-ln -s $PWD/install_ofi_slurm_pmi install
-
-module unload cray-mpich
-export PATH=$PWD/install/bin/:$PATH
-export LD_LIBRARY_PATH=$PWD/install/lib:$LD_LIBRARY_PATH
-
-# Test with OSU
-wget https://mvapich.cse.ohio-state.edu/download/mvapich/osu-micro-benchmarks-5.9.tar.gz
-tar xf osu-micro-benchmarks-5.9.tar.gz
-rm osu-micro-benchmarks-5.9.tar.gz
-cd osu-micro-benchmarks-5.9
-
-./configure --prefix=$PWD/install CC=$(which mpicc) CXX=$(which mpicxx) CFLAGS=-O3 CXXFLAGS=-O3
-make -j 10 install
-
-cd install/libexec/osu-micro-benchmarks/mpi/p2p 
-srun -n 2 --ntasks-per-node=1 ./osu_bw
-
-# Cannot remember the performance, try to compare to cray-mpich
-</code></pre></div>
-<p>It looks like you can now safely build shared libraries though.</p>
-<p>Useful links:</p>
+<h1 id="lustre">Lustre<a class="headerlink" href="#lustre" title="Permanent link">&para;</a></h1>
 <ul>
-<li><a href="https://docs.nersc.gov/development/programming-models/mpi/openmpi/">Use at NERSC</a></li>
-</ul>
-<h2 id="open-mpi-5-for-slingshot-11">Open MPI 5 for Slingshot 11<a class="headerlink" href="#open-mpi-5-for-slingshot-11" title="Permanent link">&para;</a></h2>
-<p>Useful links:</p>
-<ul>
-<li>
-<p><a href="https://www.osti.gov/biblio/1997634">CUG paper ORNL</a></p>
-<p>The paper says that changes needed in Open MPI itself are present in the Open MPI main and v5.0.x branches,
-but not in branches for older versions.</p>
-<p>One problem with Open MPI on OFI+CXI was that the CXI provider has no special pathway for intra-node messaging.
-Rather than redeveloping the MTL to deal with multiple components concurrently, a new provider was made, LINKx,
-encapsulating CXI but adding the missing features.</p>
-</li>
-<li>
-<p><a href="https://docs.nersc.gov/development/programming-models/mpi/openmpi/">Use at NERSC</a></p>
-</li>
-</ul>
-<h2 id="open-mpi-with-spack">Open MPI with Spack<a class="headerlink" href="#open-mpi-with-spack" title="Permanent link">&para;</a></h2>
-<p>Spack needs to be told how to use the proper libfabric library.</p>
-<p>A user gave some information in <a href="https://rt.lumi-supercomputer.eu/Ticket/Display.html?id=3228">ticket #3228</a>
-on how they did it:</p>
-<ul>
-<li>
-<p>Add to the spack.yaml file:</p>
-<div class="highlight"><pre><span></span><code>packages:
-  libfabric:
-    externals:
-      - spec: libfabric@1.15.2.0
-        prefix: /opt/cray/libfabric/1.15.2.0
-</code></pre></div>
-<p>I guess this could go in <code>/etc/spack/packages.yaml</code> in the Spack installation itself.</p>
-</li>
-<li>
-<p>When calling Spack to build Open MPI, specify <code>^libfabric@1.15.2.0</code>.</p>
-</li>
+<li><a href="06_99_misc/">Miscellaneous</a></li>
 </ul>
 
   <hr>
@@ -1138,7 +963,7 @@ on how they did it:</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 8, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 14, 2023</span>
       
     
   </small>
@@ -1202,10 +1027,10 @@ on how they did it:</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.indexes", "header.autohide", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.indexes", "header.autohide", "toc.follow"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      <script src="../assets/javascripts/bundle.6c14ae12.min.js"></script>
       
     
   </body>
