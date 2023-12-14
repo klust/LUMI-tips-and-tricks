@@ -21,6 +21,8 @@ in the documentation.
     1.  [Cray MPICH tips&tricks](05_MPI/05_01_Cray_MPICH_tips.md)
     2.  [Open MPI](05_MPI/05_02_OpenMPI.md)
     3.  [OSU micro-benchmarks](05_MPI/05_03_OSU_benchmarks.md)
-6.  [Linux](99_Linux/index.md)
+6.  [Lustre](06_Lustre/index.md)
+    1.  [Miscellaneous](06_Lustre/06_99_misc.md)
+7.  [Linux](99_Linux/index.md)
     1.  [File management](99_Linux/99_01_File_management.md)
 
