@@ -40,6 +40,9 @@ nav:
   - Lustre:
     - 06_Lustre/index.md
     - Miscellaneous topics: 06_Lustre/06_99_misc.md
+  - ROCm:
+    - 07_ROCm/index.md
+    - Miscellaneous topics: 07_ROCm/07_99_misc.md
   - Linux and misc:
     - 99_Linux/index.md
     - File management: 99_Linux/99_01_File_management.md
