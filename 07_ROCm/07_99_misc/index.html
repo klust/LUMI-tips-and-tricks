@@ -1138,8 +1138,13 @@
 <p>ROCm 5.4.3 appears to work</p>
 </li>
 <li>
-<p>ROCm 5.6.1: According to Samuel there are some known issues with queries
-    about available memory being off but it hasn't been a blocker for apps.</p>
+<p>ROCm 5.6.1: </p>
+<ul>
+<li>According to Samuel there are some known issues with queries
+    about available memory being off but it hasn't been a blocker for apps.</li>
+<li>Peter mentioned that he couldn't get Neko to work with ROCm 5.,6, with a failure in
+    <code>hipDeviceGetStreamPriorityRange</code> right at the start.</li>
+</ul>
 </li>
 </ul>
 <!-- Sources: 
