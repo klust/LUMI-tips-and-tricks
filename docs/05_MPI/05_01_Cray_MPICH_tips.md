@@ -20,7 +20,7 @@
 
 -   `PLTE_NOT_FOUND`
 
-    Error messgage:
+    Error message:
 
     ```
     MPIDI_OFI_handle_cq_error(1062): OFI poll failed (ofi_events.c:1064:MPIDI_OFI_handle_cq_error:Input/output error - PTLTE_NOT_FOUND)
@@ -34,6 +34,18 @@
     ```
 
     These are undocumented environment variables.
+
+-   `UNDELIVERABLE`
+   
+    Error message:
+
+    ```
+    MPIDI_OFI_handle_cq_error(1067): OFI poll failed (ofi_events.c:1069:MPIDI_OFI_handle_cq_error:Input/output error - UNDELIVERABLE)
+    ```
+
+    One possible cause is a broken switch so that messages can no longer be delivered.
+
+    -   Symptoms on the GPU nodes: A pattern of a number of subsequent either even-numbered or odd-numbered nodes.
 
 
 ## Other MPI error messages
@@ -71,4 +83,29 @@
         Documented in [the `intro_mpi` man page](https://cpe.ext.hpe.com/docs/mpt/mpich/intro_mpi.html).
 
 
+## Investigating crashes
 
+Based on tips from Juha Jaykka.
+
+-   Use `sacct` to figure out what nodes a job is using and in what time interval it ran:
+   
+    ```
+    sacct --job=$jobid --format=JobID,JobName,State,ExitCode,Start,End,NodeList%1000
+    ```
+
+-   Now use `sacctmgr` to list events on those nodes during the time window. You can 
+    copy-paste date/times and the nodelist from the previous command:
+
+    ```
+    sacctmgr list event Start=<starttime> End=<endtimne> Nodes=<nodelist> format=NodeName,TimeStart,Reason%150
+    ```
+
+-   Sometimes you can get more information about a specific node with a fault via `scontrol show node`. 
+    So for a faulty node from the previous command, you can run:
+
+    ```
+    scontrol show node <nodename or nodelist>
+    ```
+
+Note that after many node failures, a node goes automatically into drain mode, so it does not
+make sense to manually exclude them in your job scripts.
