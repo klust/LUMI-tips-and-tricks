@@ -750,6 +750,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#investigating-crashes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Investigating crashes
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1121,6 +1130,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#investigating-crashes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Investigating crashes
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1154,7 +1172,7 @@
 <ul>
 <li>
 <p><code>PLTE_NOT_FOUND</code></p>
-<p>Error messgage:</p>
+<p>Error message:</p>
 <div class="highlight"><pre><span></span><code>MPIDI_OFI_handle_cq_error(1062): OFI poll failed (ofi_events.c:1064:MPIDI_OFI_handle_cq_error:Input/output error - PTLTE_NOT_FOUND)
 </code></pre></div>
 <p>HPE Cray recommendation:</p>
@@ -1162,6 +1180,16 @@
 export FI_CXI_REQ_BUF_COUNT=200
 </code></pre></div>
 <p>These are undocumented environment variables.</p>
+</li>
+<li>
+<p><code>UNDELIVERABLE</code></p>
+<p>Error message:</p>
+<div class="highlight"><pre><span></span><code>MPIDI_OFI_handle_cq_error(1067): OFI poll failed (ofi_events.c:1069:MPIDI_OFI_handle_cq_error:Input/output error - UNDELIVERABLE)
+</code></pre></div>
+<p>One possible cause is a broken switch so that messages can no longer be delivered.</p>
+<ul>
+<li>Symptoms on the GPU nodes: A pattern of a number of subsequent either even-numbered or odd-numbered nodes.</li>
+</ul>
 </li>
 </ul>
 <h2 id="other-mpi-error-messages">Other MPI error messages<a class="headerlink" href="#other-mpi-error-messages" title="Permanent link">&para;</a></h2>
@@ -1191,13 +1219,36 @@ export FI_CXI_REQ_BUF_COUNT=200
 </ul>
 </li>
 </ul>
+<h2 id="investigating-crashes">Investigating crashes<a class="headerlink" href="#investigating-crashes" title="Permanent link">&para;</a></h2>
+<p>Based on tips from Juha Jaykka.</p>
+<ul>
+<li>
+<p>Use <code>sacct</code> to figure out what nodes a job is using and in what time interval it ran:</p>
+<div class="highlight"><pre><span></span><code>sacct --job=$jobid --format=JobID,JobName,State,ExitCode,Start,End,NodeList%1000
+</code></pre></div>
+</li>
+<li>
+<p>Now use <code>sacctmgr</code> to list events on those nodes during the time window. You can 
+    copy-paste date/times and the nodelist from the previous command:</p>
+<div class="highlight"><pre><span></span><code>sacctmgr list event Start=&lt;starttime&gt; End=&lt;endtimne&gt; Nodes=&lt;nodelist&gt; format=NodeName,TimeStart,Reason%150
+</code></pre></div>
+</li>
+<li>
+<p>Sometimes you can get more information about a specific node with a fault via <code>scontrol show node</code>. 
+    So for a faulty node from the previous command, you can run:</p>
+<div class="highlight"><pre><span></span><code>scontrol show node &lt;nodename or nodelist&gt;
+</code></pre></div>
+</li>
+</ul>
+<p>Note that after many node failures, a node goes automatically into drain mode, so it does not
+make sense to manually exclude them in your job scripts.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 12, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 12, 2024</span>
       
     
   </small>
