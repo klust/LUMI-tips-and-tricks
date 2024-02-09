@@ -5,3 +5,6 @@
 -   [Open MPI](05_02_OpenMPI.md)
 
 -   [OSU micro-benchmarks](05_03_OSU_benchmarks.md)
+
+-   [Misc](05_99_misc.md)
+  
