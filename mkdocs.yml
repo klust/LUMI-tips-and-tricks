@@ -20,6 +20,7 @@ nav:
   - Compilers:
     - 01_Compilers/index.md
     - Documentation: 01_Compilers/01_01_Doclinks.md
+    - LibSci: 01_Compilers/01_02_LibSci.md
     - Miscellaneous topics: 01_Compilers/01_99_misc.md
   - LMOD:
     - 02_LMOD/index.md

@@ -8,7 +8,8 @@ in the documentation.
 
 1.  [Compilers](01_Compilers/index.md)
     1.  [Documentation for the compilers](01_Compilers/01_01_Doclinks.md)
-    2.  [Miscellaneous topics](01_Compilers/01_99_misc.md)
+    2.  [LibSci](01_Compilers/01_02_LibSci.md)
+    3.  [Miscellaneous topics](01_Compilers/01_99_misc.md)
 2.  [LMOD](2_LMOD/index.md)
     1.  [LMOD documentation](02_LMOD/02_01_Doclinks.md)
     2.  [Lmod setup](02_LMOD/02_01_LMOD_setup.md)
