@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://klust.github.io/LUMI-tips-and-tricks/01_Compilers/01_02_LibSci/</loc>
+         <lastmod>2024-02-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://klust.github.io/LUMI-tips-and-tricks/01_Compilers/01_99_misc/</loc>
          <lastmod>2024-02-09</lastmod>
          <changefreq>daily</changefreq>
