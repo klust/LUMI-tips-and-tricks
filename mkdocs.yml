@@ -17,6 +17,7 @@ theme:
 
 nav:
   - Home: index.md
+  - Introduction: 00_00_introduction.md
   - Compilers:
     - 01_Compilers/index.md
     - Documentation: 01_Compilers/01_01_Doclinks.md
@@ -45,6 +46,10 @@ nav:
   - ROCm:
     - 07_ROCm/index.md
     - Miscellaneous topics: 07_ROCm/07_99_misc.md
+  - software:
+    - 08_Software/index.md
+    - GROMACS: 08_Software/08_G01_GROMACS.md
+    - R: 08_Software/08_R01_R.md
   - Linux and misc:
     - 99_Linux/index.md
     - File management: 99_Linux/99_01_File_management.md
