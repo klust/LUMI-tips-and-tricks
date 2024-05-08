@@ -49,6 +49,7 @@ nav:
   - software:
     - 08_Software/index.md
     - GROMACS: 08_Software/08_G01_GROMACS.md
+    - Python: 08_Software/08_P01_Python.md
     - R: 08_Software/08_R01_R.md
   - Linux and misc:
     - 99_Linux/index.md

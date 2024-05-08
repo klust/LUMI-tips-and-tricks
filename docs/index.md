@@ -29,7 +29,8 @@ in the documentation.
     1.  [Miscellaneous](07_ROCm/07_99_misc.md)
 8.  [Software](08_Software/index.md)
     1.   [GROMACS](08_Software/08_G01_GROMACS.md)
-    2.   [R](08_Software/08_R01_R.md)
+    2.   [Python](08_Software/08_P01_Python.md)
+    3.   [R](08_Software/08_R01_R.md)
 9.  [Linux](99_Linux/index.md)
     1.  [File management](99_Linux/99_01_File_management.md)
 
