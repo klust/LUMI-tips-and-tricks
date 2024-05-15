@@ -31,6 +31,8 @@ in the documentation.
     1.   [GROMACS](08_Software/08_G01_GROMACS.md)
     2.   [Python](08_Software/08_P01_Python.md)
     3.   [R](08_Software/08_R01_R.md)
-9.  [Linux](99_Linux/index.md)
-    1.  [File management](99_Linux/99_01_File_management.md)
-
+9.  [Linux](98_Linux/index.md)
+    1.  [File management](98_Linux/98_01_File_management.md)
+10. [Misc](99_Misc/index.md)
+    1.  [LUMI flop computation](99_Misc/99_01_Flops.md)
+    2.  [Login node organisation](99_Misc/99_02_LoginNodes.md)

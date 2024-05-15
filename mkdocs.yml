@@ -51,9 +51,13 @@ nav:
     - GROMACS: 08_Software/08_G01_GROMACS.md
     - Python: 08_Software/08_P01_Python.md
     - R: 08_Software/08_R01_R.md
-  - Linux and misc:
-    - 99_Linux/index.md
-    - File management: 99_Linux/99_01_File_management.md
+  - Linux:
+    - 98_Linux/index.md
+    - File management: 98_Linux/98_01_File_management.md
+  - Misc:
+    - 99_Misc/index.md
+    - FLOP computation: 99_Misc/99_01_Flops.md
+    - Login node organisation: 99_Misc/99_02_LoginNodes.md
   - Doc links from course: Doclinks.md
 
 plugins:
