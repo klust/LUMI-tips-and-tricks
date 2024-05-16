@@ -9,3 +9,12 @@
     private namespaced /tmp mounts for each user. We could enable this later 
     on the LUST uan node if you'd like to test and see it action.
 
+    We can also have a separate directory on the nvme for that too. We would just mount the NVME 
+    under /local and create /local/tmp with mode 777 and then have the namespaced tmp mounts 
+    backed by directory like /local/ns/tmp and /local/ns/var-tmp. This way we would not take away 
+    any use case (although the path would change) and still get the benefits. I have this exact 
+    setup now on one of the uan's (which is not user or lust accessible) made by hand and I think 
+    it looks pretty nice. If you like we can change uan06 to have the same setup tomorrow for 
+    you to check out. This is not yet in the configuration management, so the changes will 
+    be lost at boot, but we can enable it on the fly for uan06 and new sessions will get 
+    the private tmp. If it is good we could start the process to get that change done for uan[01-04] too.
