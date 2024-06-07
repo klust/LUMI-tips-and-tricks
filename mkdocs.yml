@@ -41,17 +41,20 @@ nav:
     - Open MPI: 05_MPI/05_02_OpenMPI.md
     - OSU micro-benchmarks: 05_MPI/05_03_OSU_benchmarks.md
     - Misc: 05_MPI/05_99_misc.md
-  - Lustre:
-    - 06_Lustre/index.md
-    - Miscellaneous topics: 06_Lustre/06_99_misc.md
   - ROCm:
-    - 07_ROCm/index.md
-    - Miscellaneous topics: 07_ROCm/07_99_misc.md
+    - 06_ROCm/index.md
+    - Miscellaneous topics: 06_ROCm/06_99_misc.md
+  - Lustre:
+    - 07_Lustre/index.md
+    - Miscellaneous topics: 07_Lustre/07_99_misc.md
+  - LUMI-O:
+    - 08_LUMI-O/index.md
+    - Miscellaneous topics: 08_LUMI-O/08_99_misc.md
   - software:
-    - 08_Software/index.md
-    - GROMACS: 08_Software/08_G01_GROMACS.md
-    - Python: 08_Software/08_P01_Python.md
-    - R: 08_Software/08_R01_R.md
+    - 09_Software/index.md
+    - GROMACS: 09_Software/09_G01_GROMACS.md
+    - Python: 09_Software/09_P01_Python.md
+    - R: 09_Software/09_R01_R.md
   - Linux:
     - 98_Linux/index.md
     - File management: 98_Linux/98_01_File_management.md
