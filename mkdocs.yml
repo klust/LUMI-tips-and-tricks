@@ -59,6 +59,7 @@ nav:
     - 99_Misc/index.md
     - FLOP computation: 99_Misc/99_01_Flops.md
     - Login node organisation: 99_Misc/99_02_LoginNodes.md
+    - HPE software releases: 99_Misc/99_03_SystemEnvironments.md
   - Doc links from course: Doclinks.md
 
 plugins:

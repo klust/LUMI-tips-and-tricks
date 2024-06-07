@@ -37,3 +37,4 @@ in the documentation.
 10. [Misc](99_Misc/index.md)
     1.  [LUMI flop computation](99_Misc/99_01_Flops.md)
     2.  [Login node organisation](99_Misc/99_02_LoginNodes.md)
+    3.  [HPE software releases](99_Misc/99_03_SystemEnvironments.md)
