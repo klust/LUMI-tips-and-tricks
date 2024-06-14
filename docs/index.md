@@ -40,3 +40,4 @@ in the documentation.
     1.  [LUMI flop computation](99_Misc/99_01_Flops.md)
     2.  [Login node organisation](99_Misc/99_02_LoginNodes.md)
     3.  [HPE software releases](99_Misc/99_03_SystemEnvironments.md)
+    4.  [EESSI](99_Misc/99_04_EESSI.md)
