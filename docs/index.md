@@ -1,8 +1,12 @@
-# Information that is missing or hard to find in the Cray PE manual or LUMI docs
+# Miscellaneous LUMI information, tips and tricks
 
 This unofficial site contains things I discovered in the HPE-Cray PE or other software on LUMI
 but have trouble finding in the documentation or is too specialised or anecdotal to have a place
 in the documentation.
+
+This is by no means an official LUMI documentation site. It is strictly the personal project of
+Kurt Lust and his memory of certain things. In no means does it express any opinion of my employer,
+the University of Antwerp, nor from any other entity involved in the LUMI project.
 
 [Documentation links page maintained for the course pages](Doclinks.md)
 
