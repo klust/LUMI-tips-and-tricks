@@ -1,8 +1,6 @@
 # EESSI
 
-## Motivation against it
-
-### Some background
+## Some background
 
 The only currently supported way of distributing EESSI is via
 [CernVM-FS](https://cernvm.cern.ch/fs/), a system based on web technology developed to distribute
@@ -51,6 +49,8 @@ Links
 
 -   [Digital Research Alliance of Canada documentation](https://docs.alliancecan.ca/wiki/Technical_documentation)
 
+
+## Why is EESSI not a very good idea on LUMI?
 
 ### CernVM-FS on a Cray system.
 
@@ -130,7 +130,7 @@ There are enough fine ways of distributing software that are a better match with
 that CernVM-FS for software distribution should not be a priority for any future development.
 
 
-### EESSI
+### EESSI software on LUMI
 
 EESSI is currently not fully compatible with LUMI.
 
