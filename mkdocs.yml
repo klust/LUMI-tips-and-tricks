@@ -32,6 +32,7 @@ nav:
   - Slurm:
     - 03_Slurm/index.md
     - Doc links: 03_Slurm/03_01_Doclinks.md
+    - GPU binding: 03_Slurm/03_02_GPU_binding.md
     - Miscellaneous: 03_Slurm/03_99_misc.md
   - AI software:
     - 04_AI_packages/index.md
