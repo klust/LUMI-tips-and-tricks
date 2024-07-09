@@ -66,6 +66,7 @@ nav:
     - Login node organisation: 99_Misc/99_02_LoginNodes.md
     - HPE software releases: 99_Misc/99_03_SystemEnvironments.md
     - EESSI: 99_Misc/99_04_EESSI.md
+    - Energy consumption: 99_Misc/99_05_Energy_consumption.md
   - Doc links from course: Doclinks.md
 
 plugins:
@@ -89,6 +90,14 @@ markdown_extensions:
   - pymdownx.tabbed
   - toc:
       permalink: true
+  # Mathematics
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
   # add links in bottom right

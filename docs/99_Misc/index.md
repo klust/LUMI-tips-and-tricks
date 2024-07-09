@@ -7,3 +7,5 @@
 -   [HPE software releases](99_03_SystemEnvironments.md)
 
 -   [EESSI](99_04_EESSI.md)
+
+-   [Energy consumption](99_05_Energy_consumption.md)

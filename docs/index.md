@@ -47,3 +47,4 @@ the University of Antwerp, nor from any other entity involved in the LUMI projec
     2.  [Login node organisation](99_Misc/99_02_LoginNodes.md)
     3.  [HPE software releases](99_Misc/99_03_SystemEnvironments.md)
     4.  [EESSI](99_Misc/99_04_EESSI.md)
+    5.  [Energy consumption](99_Misc/99_05_Energy_consumption.md)
