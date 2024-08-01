@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://klust.github.io/LUMI-tips-and-tricks/05_MPI/05_03_OSU_benchmarks/">
+        <link rel="canonical" href="https://klust.github.io/LUMI-tips-and-tricks/04_AI_packages/04_02_TensorFlow/">
       
       
-        <link rel="prev" href="../05_02_OpenMPI/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../05_99_misc/">
+        <link rel="next" href="../../05_MPI/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>OSU micro-benchmarks - Miscellaneous LUMI information, tips and tricks</title>
+        <title>TensorFlow - Miscellaneous LUMI information, tips and tricks</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#osu-micro-benchmarks" class="md-skip">
+        <a href="#tensorflow" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OSU micro-benchmarks
+              TensorFlow
             
           </span>
         </div>
@@ -679,6 +679,8 @@
       
   
   
+    
+  
   
   
     
@@ -693,16 +695,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../04_AI_packages/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -719,7 +721,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             AI software
@@ -732,10 +734,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../04_AI_packages/04_02_TensorFlow/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    TensorFlow
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -744,6 +766,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tensorflow-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      TensorFlow profiling
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -760,8 +811,6 @@
       
   
   
-    
-  
   
   
     
@@ -782,16 +831,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../05_MPI/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -808,7 +857,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             MPI
@@ -824,7 +873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05_01_Cray_MPICH_tips/" class="md-nav__link">
+      <a href="../../05_MPI/05_01_Cray_MPICH_tips/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -845,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05_02_OpenMPI/" class="md-nav__link">
+      <a href="../../05_MPI/05_02_OpenMPI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -863,19 +912,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../05_MPI/05_03_OSU_benchmarks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -884,7 +924,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -897,7 +936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05_99_misc/" class="md-nav__link">
+      <a href="../../05_MPI/05_99_misc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1628,6 +1667,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tensorflow-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      TensorFlow profiling
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1641,26 +1697,17 @@
                   
 
 
-<h1 id="osu-micro-benchmarks">OSU micro-benchmarks<a class="headerlink" href="#osu-micro-benchmarks" title="Permanent link">&para;</a></h1>
-<ul>
-<li>
-<p><a href="https://mvapich.cse.ohio-state.edu/benchmarks/">Home page of the benchmarks</a></p>
-</li>
-<li>
-<p>Examples of running the benchmarks:</p>
-<ul>
-<li>
-<p><a href="https://ulhpc-tutorials.readthedocs.io/en/latest/parallel/mpi/OSU_MicroBenchmarks/">University of Luxemburg HPC tutorial page</a></p>
-</li>
-<li>
-<p><a href="https://www.hpcworkshops.com/08-efa/04-complie-run-osu.html">AWS HPC workshop</a></p>
-</li>
-<li>
-<p><a href="https://documentation.sigma2.no/jobs/arm-perf/osu.html">Sigma2 page</a></p>
-</li>
-</ul>
-</li>
-</ul>
+<h1 id="tensorflow">TensorFlow<a class="headerlink" href="#tensorflow" title="Permanent link">&para;</a></h1>
+<h2 id="tensorflow-profiling">TensorFlow profiling<a class="headerlink" href="#tensorflow-profiling" title="Permanent link">&para;</a></h2>
+<p><em>Based on information from Orian.</em></p>
+<p>TensorFlow has a built-in profiler and this is probably the first thing to try in case of
+performance problems with TensorFlow, rather than using the AMD profiling tools.
+TensorBoard can then be used to analyse the profiler data.</p>
+<p>There is an <a href="https://rocm.blogs.amd.com/software-tools-optimization/tf_profiler/README.html">article "TensorFlow Profiler in practice: Optinmizing TensorFlow models on AMD GPUs"</a>
+in the <a href="https://rocm.blogs.amd.com">AMD ROCm blogs</a>.</p>
+<p><strong>Note:</strong> Orian once said that the root profile log directory should contain a profile
+file or TensorBoard will not detect any profile and not show the profile tab. The trick
+is to move one of the profile logs to that directory.</p>
 
 
 
@@ -1681,7 +1728,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 29, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 1, 2024</span>
   </span>
 
     
