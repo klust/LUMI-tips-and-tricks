@@ -25,6 +25,7 @@ the University of Antwerp, nor from any other entity involved in the LUMI projec
     2.  [GPU binding](03_Slurm/03_02_GPU_binding.md)
     3.  [Miscellaneous tips&tricks](03_Slurm/03_99_misc.md)
 4.  [AI software](04_AI_packages/index.md)
+    1.  [TensorFlow](04_AI_packages/04_02_TensorFlow.md)
 5.  [MPI](05_MPI/index.md)
     1.  [Cray MPICH tips&tricks](05_MPI/05_01_Cray_MPICH_tips.md)
     2.  [Open MPI](05_MPI/05_02_OpenMPI.md)

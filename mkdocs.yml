@@ -37,6 +37,7 @@ nav:
     - Miscellaneous: 03_Slurm/03_99_misc.md
   - AI software:
     - 04_AI_packages/index.md
+    - TensorFlow: 04_AI_packages/04_02_TensorFlow.md
   - MPI:
     - 05_MPI/index.md
     - Cray MPICH tips&tricks: 05_MPI/05_01_Cray_MPICH_tips.md
