@@ -18,3 +18,14 @@
     you to check out. This is not yet in the configuration management, so the changes will 
     be lost at boot, but we can enable it on the fly for uan06 and new sessions will get 
     the private tmp. If it is good we could start the process to get that change done for uan[01-04] too.
+
+To see the current limits:
+
+```bash
+$ cat /etc/systemd/system/user-.slice.d/50-userlimits.conf
+[Slice]
+CPUQuota=1600%
+MemoryMax=96G
+```
+
+
