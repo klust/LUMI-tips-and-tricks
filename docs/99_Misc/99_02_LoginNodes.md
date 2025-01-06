@@ -28,4 +28,11 @@ CPUQuota=1600%
 MemoryMax=96G
 ```
 
+We have a private tmp:
+
+```bash
+$ cat /etc/security/namespace.conf
+/tmp     /local/ns/tmp/         level      root
+/var/tmp /local/ns/var-tmp/     level      root
+```
 
