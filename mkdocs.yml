@@ -24,6 +24,7 @@ nav:
     - LibSci: 01_Compilers/01_02_LibSci.md
     - Wrapper-induced problems: 01_Compilers/01_03_WrapperIssues.md
     - Performance tools/metrics: 01_Compilers/01_04_PerformanceTools.md
+    - Intel compilers and libs: 01_Compilers/01_05_Intel.md
     - Miscellaneous topics: 01_Compilers/01_99_misc.md
   - LMOD:
     - 02_LMOD/index.md
