@@ -28,13 +28,14 @@ nav:
     - Miscellaneous topics: 01_Compilers/01_99_misc.md
   - LMOD:
     - 02_LMOD/index.md
-    - Dcoumentation: 02_LMOD/02_01_Doclinks.md
+    - Documentation: 02_LMOD/02_01_Doclinks.md
     - Lmod setup: 02_LMOD/02_02_LMOD_setup.md
     - PE module structure: 02_LMOD/02_03_PE_module_structure.md
   - Slurm:
     - 03_Slurm/index.md
     - Doc links: 03_Slurm/03_01_Doclinks.md
     - GPU binding: 03_Slurm/03_02_GPU_binding.md
+    - Slurm in container: 03_Slurm/03_03_Slurm_in_container.md
     - Miscellaneous: 03_Slurm/03_99_misc.md
   - AI software:
     - 04_AI_packages/index.md
