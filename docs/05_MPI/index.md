@@ -6,5 +6,7 @@
 
 -   [OSU micro-benchmarks](05_03_OSU_benchmarks.md)
 
+-   [Open MPI tips&tricks](05_04_OpenMPI.md)
+
 -   [Misc](05_99_misc.md)
   
