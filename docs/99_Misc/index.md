@@ -11,3 +11,5 @@
 -   [Energy consumption](99_05_Energy_consumption.md)
 
 -   [Answers to frequent user complaints](99_06_Answers_to_user_complaints.md)
+
+-   [Screen utility](99_07_screen_utility.md)
