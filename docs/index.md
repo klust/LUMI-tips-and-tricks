@@ -56,3 +56,4 @@ the University of Antwerp, nor from any other entity involved in the LUMI projec
     5.  [Energy consumption](99_Misc/99_05_Energy_consumption.md)
     6.  [Answers to frequent user complaints](99_Misc/99_06_Answers_to_user_complaints.md)
     7.  [Screen utility](99_Misc/99_07_screen_utility.md)
+    8.  [Examples of stupid things to do on LUMI](99_Misc/99_08_Examples_of_stupid_things.md)
