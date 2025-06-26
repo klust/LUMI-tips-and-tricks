@@ -55,6 +55,7 @@ nav:
     - Miscellaneous topics: 07_Lustre/07_99_misc.md
   - LUMI-O:
     - 08_LUMI-O/index.md
+    - Cyberduck: 08_LUMI-O/08_01_Cyberduck.md
     - Miscellaneous topics: 08_LUMI-O/08_99_misc.md
   - software:
     - 09_Software/index.md
