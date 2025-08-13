@@ -1085,9 +1085,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#network-interfaces-and-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network interfaces and protocols
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-rccl-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging RCCL issues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mscclmsccl" class="md-nav__link">
     <span class="md-ellipsis">
       MSCCL/MSCCL++
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other tuning
     </span>
   </a>
   
@@ -1858,9 +1885,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#network-interfaces-and-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network interfaces and protocols
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-rccl-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging RCCL issues
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mscclmsccl" class="md-nav__link">
     <span class="md-ellipsis">
       MSCCL/MSCCL++
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other tuning
     </span>
   </a>
   
@@ -1884,8 +1938,79 @@
 <h1 id="rccl-environment-variables">RCCL environment variables<a class="headerlink" href="#rccl-environment-variables" title="Permanent link">&para;</a></h1>
 <p>To mention:</p>
 <ul>
+<li><code>NCCL_DEBUG_FILE</code></li>
+<li><code>NCCL_ALGO</code></li>
 <li><code>NCCL_MIN_CHANNELS</code></li>
 <li><code>MSCCLPP_READ_ALLRED</code></li>
+<li><code>NCCL_TUNER_PLUGIN</code></li>
+</ul>
+<h2 id="network-interfaces-and-protocols">Network interfaces and protocols<a class="headerlink" href="#network-interfaces-and-protocols" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><code>NCCL_SOCKET_IFNAME</code>: Explicitly defines the network interfaces for RCLL to use.
+    Multiple interfaces may be provided as comma separated values.</p>
+<p>On LUMI, <code>NCCL_SOCKET_IFNAME=hsn</code> or <code>NCCL_SOCKET_IFNAME=hsn0,hsn1,hsn2,hsn3</code> should
+be used and this is even essential as by default RCCL will try to use the management network
+interface.</p>
+</li>
+<li>
+<p><code>NCCL_NET_GDR_LEVEL</code>: maximum level of distance between a GPU and NIC at which GPU Direct RDMA/PeerDirect should be used. </p>
+<p>Values (integer values are legacy and discouraged)</p>
+<ul>
+<li>
+<p><code>LOC</code> or <code>0</code>: Never use RDMA (always disabled).</p>
+</li>
+<li>
+<p><code>PIX</code> or <code>1</code>: Use RDMA when GPU and NIC are connected to the same PCI switch.</p>
+</li>
+<li>
+<p><code>PXB</code> or <code>2</code>: Use RDMA when GPU and NIC are connected through different PCI switches (potentially multiple hops).</p>
+</li>
+<li>
+<p><code>PHB</code> or <code>3</code>: Use RDMA when GPU and NIC are on the same NUMA node. Traffic will go through the CPU.</p>
+</li>
+<li>
+<p><code>SYS</code> or <code>4</code>: Use RDMA even across the SMP interconnect between NUMA nodes (e.g., QPI/UPI) (always enabled).</p>
+</li>
+</ul>
+<p>The value needed on LUMI is <code>PHB</code> or <code>3</code>. From ROCm 6.2 onwards this is also the default.</p>
+</li>
+</ul>
+<h2 id="debugging-rccl-issues">Debugging RCCL issues<a class="headerlink" href="#debugging-rccl-issues" title="Permanent link">&para;</a></h2>
+<p>See <a href="https://rocm.docs.amd.com/projects/rccl/en/develop/how-to/troubleshooting-rccl.html">"Troubleshooting RCCL"</a></p>
+<ul>
+<li>
+<p><code>NCCL_DEBUG</code>: Sets the debug information that is displayed. Possible values (assuming the are the same as on NVIDIA):</p>
+<ul>
+<li>
+<p><code>VERSION</code>: Prints the NCCL version at the start of the program.</p>
+</li>
+<li>
+<p><code>WARN</code>: Prints an explicit error message whenever any NCCL call errors out.</p>
+</li>
+<li>
+<p><code>INFO</code>: Prints debug information</p>
+</li>
+<li>
+<p><code>TRACE</code>: Prints replayable trace information on every call.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>NCCL_DEBUG_SUBSYS</code>: To be used with <code>NCCL_DEBUG=INFO</code> to filter the information based on susbystem.</p>
+<p>Values seen in AMD docs (found <a href="https://instinct.docs.amd.com/projects/gpu-cluster-networking/en/latest/how-to/multi-node-config.html#nccl-debug-subsys">here</a>):</p>
+<ul>
+<li>'INIT': Initialisation</li>
+<li><code>COLL</code>: Collective operations</li>
+<li><code>P2P</code>: Peer-to-peer operations</li>
+<li><code>NET</code>: Network</li>
+<li><code>GRAPH</code>: Topology detection and graph search</li>
+<li><code>TUNING</code>: Algorithm and protocol tuning</li>
+<li><code>ENV</code>: Environment settings</li>
+<li><code>ALLOC</code>: Memory allocations</li>
+<li><code>ALL</code>: Include all.</li>
+</ul>
+</li>
 </ul>
 <h2 id="mscclmsccl">MSCCL/MSCCL++<a class="headerlink" href="#mscclmsccl" title="Permanent link">&para;</a></h2>
 <p>See <a href="https://rocm.docs.amd.com/projects/rccl/en/develop/how-to/rccl-usage-tips.html#msccl-msccl">RCCL usage tips, MSCCL/MSCCL++</a>.</p>
@@ -1911,6 +2036,13 @@ Microsoft Corporation collaborated with AMD for this project.</p>
 <li>
 <p><code>RCCL_MSCCLPP_THRESHOLD</code>: Set the message size threshold for using MSCCL++, default is 1MB.</p>
 </li>
+</ul>
+<h2 id="other-tuning">Other tuning<a class="headerlink" href="#other-tuning" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>NCCL_ALGO</code> with possible values <code>Tree</code> or <code>Ring</code>: Sets the algorithm for a collective operation.
+    By default a mix may be used depending on the message size, and a different algorithm for each 
+    collective. This environment variable will force the same algorithm for all collectives and
+    all message sizes.</li>
 </ul>
 
 
