@@ -49,6 +49,7 @@ nav:
     - Misc: 05_MPI/05_99_misc.md
   - ROCm:
     - 06_ROCm/index.md
+    - RCCL env. var.: 06_ROCm/06_01_RCCL.md
     - Miscellaneous topics: 06_ROCm/06_99_misc.md
   - Lustre:
     - 07_Lustre/index.md
