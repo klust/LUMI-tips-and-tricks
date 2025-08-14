@@ -5,4 +5,5 @@
 -   [Wrapper-induced problems](01_03_WrapperIssues.md)
 -   [Performance tools and metrics](01_04_PerformanceTools.md)
 -   [Intel compilers and libraries](01_05_Intel.md)
+-   [Huge pages support](01_06_HugePagesSupport.md)
 -   [Miscellaneous topics](01_99_misc.md)
