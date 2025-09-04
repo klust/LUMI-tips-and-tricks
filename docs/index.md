@@ -51,6 +51,7 @@ the University of Antwerp, nor from any other entity involved in the LUMI projec
 10. [Linux](98_Linux/index.md)
     1.  [File management](98_Linux/98_01_File_management.md)
     2.  [Bash tips](98_Linux/98_02_Bash_tips.md)
+    3.  [Container tips](98_Linux/98_03_Containers.md)
 11. [Misc](99_Misc/index.md)
     1.  [LUMI flop computation](99_Misc/99_01_Flops.md)
     2.  [Login node organisation](99_Misc/99_02_LoginNodes.md)

@@ -69,6 +69,7 @@ nav:
     - 98_Linux/index.md
     - File management: 98_Linux/98_01_File_management.md
     - Bash tips: 98_Linux/98_02_Bash_tips.md
+    - Container tips: 98_Linux/98_03_Containers.md
   - Misc:
     - 99_Misc/index.md
     - FLOP computation: 99_Misc/99_01_Flops.md
