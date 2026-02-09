@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://klust.github.io/LUMI-tips-and-tricks/99_Misc/99_07_screen_utility/">
+        <link rel="canonical" href="https://klust.github.io/LUMI-tips-and-tricks/99_Misc/99_09_Job_notifications/">
       
       
-        <link rel="prev" href="../99_06_Answers_to_user_complaints/">
+        <link rel="prev" href="../99_08_Examples_of_stupid_things/">
       
       
-        <link rel="next" href="../99_08_Examples_of_stupid_things/">
+        <link rel="next" href="../../Doclinks/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Screen utility - Miscellaneous LUMI information, tips and tricks</title>
+        <title>Getting job notifications on your phone - Miscellaneous LUMI information, tips and tricks</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-screen" class="md-skip">
+        <a href="#getting-job-notifications-on-your-phone" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Screen utility
+              Getting job notifications on your phone
             
           </span>
         </div>
@@ -2270,19 +2270,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../99_07_screen_utility/" class="md-nav__link">
         
   
   
@@ -2298,7 +2289,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2336,10 +2326,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../99_09_Job_notifications/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting job notifications on your phone
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2355,6 +2372,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#procedure-one-with-pushover" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure one: With pushover
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure-two-with-telegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure two: With Telegram
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2414,6 +2473,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#procedure-one-with-pushover" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure one: With pushover
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#procedure-two-with-telegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure two: With Telegram
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2429,38 +2518,88 @@
 
 
 
-<h1 id="using-screen">Using screen<a class="headerlink" href="#using-screen" title="Permanent link">&para;</a></h1>
-<ol>
+<h1 id="getting-job-notifications-on-your-phone">Getting job notifications on your phone<a class="headerlink" href="#getting-job-notifications-on-your-phone" title="Permanent link">&para;</a></h1>
+<h2 id="procedure-one-with-pushover">Procedure one: With pushover<a class="headerlink" href="#procedure-one-with-pushover" title="Permanent link">&para;</a></h2>
+<p><a href="https://pushover.net/">Pushover</a> is a simple-to-use notification service that is almost free
+for individual use, basically only requiring the purchase of their app.
+It also seems to be relatively safe.</p>
+<p>Setting up:</p>
+<ul>
 <li>
-<p>Start a Screen session</p>
-<p>Simply type <code>screen</code> and press Enter. This will start a new session.</p>
-<p>To create a named session instead, use <code>screen -S mysession</code>.</p>
+<p>Create an account with them, which will give you a user key.</p>
+<p>It is dangerous to put that user key in a script, especially if that script is also stored
+in a place where others can read it. </p>
+<p>For our example, the key is stored in the file <code>~/.pushover_user_key</code> which has been made 
+only user-readable.</p>
 </li>
 <li>
-<p>Detach from a session</p>
-<p>Press <code>Ctrl-A</code> followed by <code>D</code>. The session will continue running in the background.</p>
+<p>On their website, in your profile page that you get after logging in, create an application
+    which will give you an API token. </p>
+<p>That one should also be stored safely. In our example, it is stored in the file
+<code>~/.pushover_LUMI_app</code>.</p>
 </li>
 <li>
-<p>List active sessions</p>
-<p>Run <code>screen -ls</code> </p>
+<p>The following bash function can then be used to send a message:</p>
+<div class="highlight"><pre><span></span><code><span class="k">function</span><span class="w"> </span>pushover<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="c1"># Send a message to the LUMI app in pushover.</span>
+
+<span class="w">   </span>curl<span class="w"> </span>-s<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--form-string<span class="w"> </span><span class="s2">&quot;token=</span><span class="k">$(</span>cat<span class="w"> </span>~/.pushover_LUMI_app<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--form-string<span class="w"> </span><span class="s2">&quot;user=</span><span class="k">$(</span>cat<span class="w"> </span>~/.pushover_user_key<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--form-string<span class="w"> </span><span class="s2">&quot;message=</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>https://api.pushover.net/1/messages.json<span class="w"> </span>&gt;<span class="p">&amp;</span><span class="w"> </span>/dev/null
+
+<span class="o">}</span>
+<span class="nb">declare</span><span class="w"> </span>-fx<span class="w"> </span>pushover
+</code></pre></div>
 </li>
 <li>
-<p>Re-attach to a session</p>
-<ol>
+<p>And in your job script, you can simply put at the start:</p>
+<div class="highlight"><pre><span></span><code>pushover<span class="w"> </span><span class="s2">&quot;Job </span><span class="nv">$SLURM_JOBID</span><span class="s2"> on LUMI has started.&quot;</span>
+</code></pre></div>
+</li>
+</ul>
+<h2 id="procedure-two-with-telegram">Procedure two: With Telegram<a class="headerlink" href="#procedure-two-with-telegram" title="Permanent link">&para;</a></h2>
+<p>Telegram offers an entirely free method, but it does seem a bit more risky as it involves
+starting a bot that others may also find and use, though with some care they cannot easily 
+use it to send messages to you.</p>
+<ul>
 <li>
-<p>Use <code>screen -r</code> to attach to resume the last session.</p>
+<p>Create a Telegram bot: Open a chat with "@BotFather" with the message "/newbot" and
+    answer the questions.</p>
+<p>You will get a bot token which needs to be stored safely. For our example code, it is 
+stored in <code>~/.telegrambot</code> with read rights only for the owner.</p>
 </li>
 <li>
-<p>Use <code>screen -r mysession</code> to attach to a named session.</p>
+<p>Start a chat with your bot in Telegram. And now we need to figure out the chatID of that
+    chat. One way is to use the cURL tool to request information from the bot:</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>https://api.telegram.org/bot<span class="k">$(</span>cat<span class="w"> </span>~/.telegrambot<span class="k">)</span>/getUpdates
+</code></pre></div>
+<p>or, to get more readable output if the <code>jq</code> command is installed,</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>https://api.telegram.org/bot<span class="k">$(</span>cat<span class="w"> </span>~/.telegrambot<span class="k">)</span>/getUpdates<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq
+</code></pre></div>
+<p>Look for the "chat" object and note its "id". This number again has to be stored 
+safely. For our example script, it was put in the file <code>~/.telegramchatid</code>.</p>
 </li>
 <li>
-<p>If you got kicked out of the system, the session may still be attached. Use
-    <code>screen -D -r mysession</code> to force-detach, then re-attach to the session.
-    (No name is needed if there is only one session.)</p>
+<p>Now create a bash function to send a message:</p>
+<div class="highlight"><pre><span></span><code><span class="k">function</span><span class="w"> </span>TelegramMessage<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="c1"># Send a message to the LUMI job notification bot.</span>
+
+<span class="w">   </span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-d<span class="w"> </span><span class="nv">chat_id</span><span class="o">=</span><span class="k">$(</span>cat<span class="w"> </span>~/.telegramchatid<span class="k">)</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>-d<span class="w"> </span><span class="nv">text</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span><span class="s2">&quot;https://api.telegram.org/bot</span><span class="k">$(</span>cat<span class="w"> </span>~/.telegrambot<span class="k">)</span><span class="s2">/sendMessage&quot;</span><span class="w"> </span>&gt;<span class="p">&amp;</span><span class="w"> </span>/dev/null
+
+<span class="o">}</span>
+<span class="nb">declare</span><span class="w"> </span>-fx<span class="w"> </span>TelegramMessage
+</code></pre></div>
 </li>
-</ol>
+<li>
+<p>And in your job script, you can simply put at the start:</p>
+<div class="highlight"><pre><span></span><code>TelegramMessage<span class="w"> </span><span class="s2">&quot;Job </span><span class="nv">$SLURM_JOBID</span><span class="s2"> on LUMI has started.&quot;</span>
+</code></pre></div>
+<p>to get a message send to Telegram which can then produce a notification.</p>
 </li>
-</ol>
+</ul>
 
 
 
@@ -2481,7 +2620,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 10, 2025 15:35:04 UTC">April 10, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 9, 2026 13:55:23 UTC">February 9, 2026</span>
   </span>
 
     
