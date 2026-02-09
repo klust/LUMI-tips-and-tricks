@@ -15,3 +15,6 @@
 -   [Screen utility](99_07_screen_utility.md)
 
 -   [Examples of stupid things to do on LUMI](99_08_Examples_of_stupid_things.md)
+
+-   [Getting job notifications on your phone](99_09_Job_notifications.md)
+
