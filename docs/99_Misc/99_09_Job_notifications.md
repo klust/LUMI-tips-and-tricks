@@ -93,3 +93,30 @@ use it to send messages to you.
     ```
 
     to get a message send to Telegram which can then produce a notification.
+
+
+## RocketChat
+
+Unfortunately, it looks like you cannot send messages to people on the CSC RocketChat
+that way. The "@username" trick for the channel does not seem to work.
+
+Procedure:
+
+-   Use the client to get an access token and userid via the "Profile" submenu "Personal Access Tokens".
+    Store safely. 
+
+    For the purpose of this example, the token was stored in `~/.RocketChat_token` and the userid in
+    `~/.RocketChat_userid`.
+
+-   Sending a message to a channel:
+
+    ``` bash
+    curl -H "X-Auth-Token: $(cat ~/.RocketChat_token)" \
+         -H "X-User-Id: $(cat ~/.RocketChat_userid)" \
+         -H "Content-Type: application/json" \
+         -d '{ "channel": "CHANNEL_NAME", "text": "Hello from the command line" }' \
+         https://chat.csc.fi/api/v1/chat.postMessage
+    ```
+
+-   According to the documentation, you can use "@username" for the channel to send to a user,
+    but that doesn't seem to work on LUMI.
