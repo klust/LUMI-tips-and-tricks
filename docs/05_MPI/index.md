@@ -8,5 +8,7 @@
 
 -   [Open MPI tips&tricks](05_04_OpenMPI.md)
 
+-   [Bugs caused by asynchronous communication](05_05_Async_MPI_bugs.md)
+
 -   [Misc](05_99_misc.md)
   
