@@ -18,3 +18,4 @@
 
 -   [Getting job notifications on your phone](99_09_Job_notifications.md)
 
+-   [Strange mistakes](99_10_Strange_mistakes.md)
