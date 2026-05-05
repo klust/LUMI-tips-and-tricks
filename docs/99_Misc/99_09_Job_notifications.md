@@ -97,20 +97,62 @@ use it to send messages to you.
 
 ## Procedure 3: With Slack
 
-It should be possible with Slack also, as I got a user who was asking if this is
-allowed.
-
-Steps I took:
+There are multiple approaches. This one describes the approach using the Slack API `chat.postMessage`.
 
 -   Created a personal workspace with no other members in there at the moment via
     the Slack web app [app.slack.com](https://app.slack.com)
 
--   I also created an app for that workspace:
+-   Need an app/bot to send us the messages. As such they do not get mixed with other notes etc.
+    that we may want to save also in our personal communication channel (if we could even get 
+    sending messages from outside directly to that channel without bot intervention to work)
 
-    -   Create a Slack App: Go to the Slack API dashboard and create 
+    -   Create a Slack App: Go to the [Slack API dashboard](https://api.slack.com/apps) and create 
+        a new app from scratch. Create the app in the workspace you want to receive messages in,
+        like the personal workspace that we created in the previous step.
+
+    -   In the app, under "OAuth and Permissions", scroll down the page to "Scopes" 
+        and add the "Bot Token Scope" "chat:write".
+
+    -   Now you have to install or re-install the app in the workspace you created
+        which can also be done from the "OAuth and Permissions" screen, a little higher
+        up, and in "Channel for webhook", select your app under "Direct Messages".
+
+        Now you can find the "Bot User OAuth Token" (starts with `xoxb-`) which you will 
+        need to send messages.
+
+-   You also need to find your slack member ID in the workplace: Click on your profile picture in 
+    Slack. Select "Profile" in the menu. Then in the right screen with your profile, click "More" 
+    (the three vertical dots) and finally "Copy member ID". 
+
+    Copy it to a safe place. It will likely start with U.
+
+-   Try now:
+
+    ``` bash
+    curl -X POST -H "Authorization: Bearer xoxb-your-token-here" \
+        -H "Content-type: application/json" \
+        --data '{"channel":"YOUR_MEMBER_ID", "text":"Testing API message"}' \
+        https://slack.com/api/chat.postMessage
+    ```
+
+    This message will arrive under "Apps", in the name of your app, so that it does not mix with
+    other stuff you may want to do in the channel where you keep messages to yourself, which is kind
+    of a personal notebook. 
+
+### Alternative with a web hook
+
+In this alternative, you send 
+
+-   Create a personal workspace with no other members in there at the moment via
+    the Slack web app [app.slack.com](https://app.slack.com) if you can't use another
+    workspace you are already in or don't have sufficient rights in that one.
+
+-   Create an app for that workspace:
+
+    -   Create a Slack App: Go to the [Slack API dashboard](https://api.slack.com/apps) and create 
         a new app from scratch.
 
-    -   Enable Webhooks: In the app settings, click Incoming Webhooks and 
+    -   Enable Webhooks: In the app settings, click "Incoming Webhooks" and 
         toggle it to "On."
 
     -   Add Webhook to Workspace: Click "Add New Webhook" at the bottom of the screen.
@@ -127,38 +169,6 @@ Steps I took:
 
     This is enough to send a message. A message sent this way, will appear under the
     "Direct messages" with your name as sender.
-
--   But we can make this a bit more versatile and use a different technique for sending
-    messages:
-
-    -   In the app, under "OAuth and Permissions", scroll down the page to "Scopes" 
-        and add the "Bot Token Scope" "chat:write".
-
-    -   Now you have to install or re-install the app in the workspace you created
-        which can also be done from the "OAuth and Permissions" screen, a little higher
-        up, and in "Channel for webhook", select your app under "Direct Messages".
-
-    -   From the same "OAuth and Permissions" screen, also copy your "Bot User OAth Token"
-        (which should start with `xoxp-`).
-
-    -   Now go find you slack member ID: Click on your profile picture in 
-        Slack. Select "Profile" in the menu. Then in the right screen with your profile, click "More" 
-        (the three vertical dots) and finally "Copy member ID". 
-
-        Copy it to a safe place. It will likely start with U.
-
--   Try now:
-
-    ``` bash
-    curl -X POST -H "Authorization: Bearer xoxb-your-token-here" \
-    -H "Content-type: application/json" \
-    --data '{"channel":"YOUR_MEMBER_ID", "text":"Testing API message"}' \
-    https://slack.com/api/chat.postMessage
-    ```
-
-    This message will arrive under "Apps", in the name of your app, so that it does not mix with
-    other stuff you may want to do in the channel where you keep messages to yourself, which is kind
-    of a personal notebook. 
 
 
 ## RocketChat
