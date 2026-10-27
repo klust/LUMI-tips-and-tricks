@@ -2566,7 +2566,7 @@ suggests:</p>
 </code></pre></div>
 <p>The solution seems to be to run in a desktop session and then</p>
 <div class="highlight"><pre><span></span><code>singularity exec --nv /appl/local/ood/$SLURM_OOD_ENV/container_images/paraview_5.11.sif \
-  bash -c &#39;export VGL_DISPLAY=/dev/dri/card1; vglrun paraview&#39;
+  bash -c 'export VGL_DISPLAY=/dev/dri/card1; vglrun paraview'
 </code></pre></div>
 <p>Check the "About" dialog in ParaView to confirm that the GPU is being used. It should show
 a proper OpenGL version and as the OpenGL renderer "NVIDIA A40/PCIe/SSE2". </p>

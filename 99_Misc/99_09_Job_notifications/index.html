@@ -2681,9 +2681,9 @@ only user-readable.</p>
 <div class="highlight"><pre><span></span><code><span class="k">function</span><span class="w"> </span>pushover<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="c1"># Send a message to the LUMI app in pushover.</span>
 
 <span class="w">   </span>curl<span class="w"> </span>-s<span class="w"> </span><span class="se">\</span>
-<span class="w">        </span>--form-string<span class="w"> </span><span class="s2">&quot;token=</span><span class="k">$(</span>cat<span class="w"> </span>~/.pushover_LUMI_app<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">        </span>--form-string<span class="w"> </span><span class="s2">&quot;user=</span><span class="k">$(</span>cat<span class="w"> </span>~/.pushover_user_key<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">        </span>--form-string<span class="w"> </span><span class="s2">&quot;message=</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--form-string<span class="w"> </span><span class="s2">"token=</span><span class="k">$(</span>cat<span class="w"> </span>~/.pushover_LUMI_app<span class="k">)</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--form-string<span class="w"> </span><span class="s2">"user=</span><span class="k">$(</span>cat<span class="w"> </span>~/.pushover_user_key<span class="k">)</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>--form-string<span class="w"> </span><span class="s2">"message=</span><span class="nv">$1</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>https://api.pushover.net/1/messages.json<span class="w"> </span>&gt;<span class="p">&amp;</span><span class="w"> </span>/dev/null
 
 <span class="o">}</span>
@@ -2692,7 +2692,7 @@ only user-readable.</p>
 </li>
 <li>
 <p>And in your job script, you can simply put at the start:</p>
-<div class="highlight"><pre><span></span><code>pushover<span class="w"> </span><span class="s2">&quot;Job </span><span class="nv">$SLURM_JOBID</span><span class="s2"> on LUMI has started.&quot;</span>
+<div class="highlight"><pre><span></span><code>pushover<span class="w"> </span><span class="s2">"Job </span><span class="nv">$SLURM_JOBID</span><span class="s2"> on LUMI has started."</span>
 </code></pre></div>
 </li>
 </ul>
@@ -2724,8 +2724,8 @@ safely. For our example script, it was put in the file <code>~/.telegramchatid</
 
 <span class="w">   </span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>-d<span class="w"> </span><span class="nv">chat_id</span><span class="o">=</span><span class="k">$(</span>cat<span class="w"> </span>~/.telegramchatid<span class="k">)</span><span class="w"> </span><span class="se">\</span>
-<span class="w">        </span>-d<span class="w"> </span><span class="nv">text</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">        </span><span class="s2">&quot;https://api.telegram.org/bot</span><span class="k">$(</span>cat<span class="w"> </span>~/.telegrambot<span class="k">)</span><span class="s2">/sendMessage&quot;</span><span class="w"> </span>&gt;<span class="p">&amp;</span><span class="w"> </span>/dev/null
+<span class="w">        </span>-d<span class="w"> </span><span class="nv">text</span><span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">        </span><span class="s2">"https://api.telegram.org/bot</span><span class="k">$(</span>cat<span class="w"> </span>~/.telegrambot<span class="k">)</span><span class="s2">/sendMessage"</span><span class="w"> </span>&gt;<span class="p">&amp;</span><span class="w"> </span>/dev/null
 
 <span class="o">}</span>
 <span class="nb">declare</span><span class="w"> </span>-fx<span class="w"> </span>TelegramMessage
@@ -2733,7 +2733,7 @@ safely. For our example script, it was put in the file <code>~/.telegramchatid</
 </li>
 <li>
 <p>And in your job script, you can simply put at the start:</p>
-<div class="highlight"><pre><span></span><code>TelegramMessage<span class="w"> </span><span class="s2">&quot;Job </span><span class="nv">$SLURM_JOBID</span><span class="s2"> on LUMI has started.&quot;</span>
+<div class="highlight"><pre><span></span><code>TelegramMessage<span class="w"> </span><span class="s2">"Job </span><span class="nv">$SLURM_JOBID</span><span class="s2"> on LUMI has started."</span>
 </code></pre></div>
 <p>to get a message send to Telegram which can then produce a notification.</p>
 </li>
@@ -2776,9 +2776,9 @@ need to send messages.</p>
 </li>
 <li>
 <p>Try now:</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer xoxb-your-token-here&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>-H<span class="w"> </span><span class="s2">&quot;Content-type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--data<span class="w"> </span><span class="s1">&#39;{&quot;channel&quot;:&quot;YOUR_MEMBER_ID&quot;, &quot;text&quot;:&quot;Testing API message&quot;}&#39;</span><span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer xoxb-your-token-here"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-H<span class="w"> </span><span class="s2">"Content-type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--data<span class="w"> </span><span class="s1">'{"channel":"YOUR_MEMBER_ID", "text":"Testing API message"}'</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>https://slack.com/api/chat.postMessage
 </code></pre></div>
 <p>This message will arrive under "Apps", in the name of your app, so that it does not mix with
@@ -2817,7 +2817,7 @@ of a personal notebook. </p>
 </li>
 <li>
 <p>Try now:</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-H<span class="w"> </span><span class="s1">&#39;Content-type: application/json&#39;</span><span class="w"> </span>--data<span class="w"> </span><span class="s1">&#39;{&quot;text&quot;:&quot;Hello, World!&quot;}&#39;</span><span class="w"> </span>https://hooks.slack.com/services/T.../B.../XXXX
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-H<span class="w"> </span><span class="s1">'Content-type: application/json'</span><span class="w"> </span>--data<span class="w"> </span><span class="s1">'{"text":"Hello, World!"}'</span><span class="w"> </span>https://hooks.slack.com/services/T.../B.../XXXX
 </code></pre></div>
 <p>This is enough to send a message. A message sent this way, will appear under the
 "Direct messages" with your name as sender.</p>
@@ -2836,10 +2836,10 @@ that way. The "@username" trick for the channel does not seem to work.</p>
 </li>
 <li>
 <p>Sending a message to a channel:</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;X-Auth-Token: </span><span class="k">$(</span>cat<span class="w"> </span>~/.RocketChat_token<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;X-User-Id: </span><span class="k">$(</span>cat<span class="w"> </span>~/.RocketChat_userid<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">     </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">     </span>-d<span class="w"> </span><span class="s1">&#39;{ &quot;channel&quot;: &quot;CHANNEL_NAME&quot;, &quot;text&quot;: &quot;Hello from the command line&quot; }&#39;</span><span class="w"> </span><span class="se">\</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">"X-Auth-Token: </span><span class="k">$(</span>cat<span class="w"> </span>~/.RocketChat_token<span class="k">)</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">"X-User-Id: </span><span class="k">$(</span>cat<span class="w"> </span>~/.RocketChat_userid<span class="k">)</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>-d<span class="w"> </span><span class="s1">'{ "channel": "CHANNEL_NAME", "text": "Hello from the command line" }'</span><span class="w"> </span><span class="se">\</span>
 <span class="w">     </span>https://chat.csc.fi/api/v1/chat.postMessage
 </code></pre></div>
 </li>

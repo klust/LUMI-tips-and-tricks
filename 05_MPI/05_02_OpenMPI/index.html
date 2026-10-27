@@ -2605,7 +2605,7 @@
 <div class="highlight"><pre><span></span><code>module load PrgEnv-gnu
 module unload cray-mpich
 OMPI_VERSION=4.1.6
-echo &quot;Install OpenMPI v&quot;$OMPI_VERSION
+echo "Install OpenMPI v"$OMPI_VERSION
 wget https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-$OMPI_VERSION.tar.bz2
 tar xf openmpi-$OMPI_VERSION.tar.bz2 &amp;&amp; rm openmpi-$OMPI_VERSION.tar.bz2
 cd openmpi-$OMPI_VERSION
@@ -2613,7 +2613,7 @@ cd openmpi-$OMPI_VERSION
 # SLURM (default yes), OFI, PMI
 make clean
 ./configure --prefix=$PWD/install_ofi_slurm_pmi/ \
---with-ofi=/opt/cray/libfabric/1.15.2.0 --with-slurm --with-pmi=/usr CC=gcc CXX=g++ FTN=gfortran CFLAGS=&quot;-march=znver2&quot; \
+--with-ofi=/opt/cray/libfabric/1.15.2.0 --with-slurm --with-pmi=/usr CC=gcc CXX=g++ FTN=gfortran CFLAGS="-march=znver2" \
 --disable-shared --enable-static
 make -j 10 install
 

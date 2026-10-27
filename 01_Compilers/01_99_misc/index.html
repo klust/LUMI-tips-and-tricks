@@ -2757,7 +2757,7 @@
 </tbody>
 </table>
 <h2 id="finding-the-include-files-etc-for-hipcc-when-compiling-other-code-with-the-cray-compiler">Finding the include files etc. for <code>hipcc</code> when compiling other code with the Cray compiler<a class="headerlink" href="#finding-the-include-files-etc-for-hipcc-when-compiling-other-code-with-the-cray-compiler" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HIPCC_COMPILE_FLAGS_APPEND</span><span class="o">=</span><span class="s2">&quot;--offload-arch=gfx90a </span><span class="k">$(</span>CC<span class="w"> </span>--cray-print-opts<span class="o">=</span>cflags<span class="k">)</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HIPCC_COMPILE_FLAGS_APPEND</span><span class="o">=</span><span class="s2">"--offload-arch=gfx90a </span><span class="k">$(</span>CC<span class="w"> </span>--cray-print-opts<span class="o">=</span>cflags<span class="k">)</span><span class="s2">"</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">HIPCC_LINK_FLAGS_APPEND</span><span class="o">=</span><span class="k">$(</span>CC<span class="w"> </span>--cray-print-opts<span class="o">=</span>libs<span class="k">)</span>
 </code></pre></div>
 <h2 id="compilers-compared">Compilers compared<a class="headerlink" href="#compilers-compared" title="Permanent link">&para;</a></h2>

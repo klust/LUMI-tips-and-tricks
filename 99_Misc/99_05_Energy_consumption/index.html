@@ -2623,7 +2623,7 @@
 git<span class="w"> </span>clone<span class="w"> </span>--recursive<span class="w"> </span>https://git.astron.nl/RD/pmt.git
 mkdir<span class="w"> </span>pmt/build
 <span class="nb">cd</span><span class="w"> </span>pmt/build
-sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/Cray::name/name/&#39;</span><span class="w"> </span>../cray/Cray.h
+sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'s/Cray::name/name/'</span><span class="w"> </span>../cray/Cray.h
 cmake<span class="w"> </span>-DPMT_BUILD_CRAY<span class="o">=</span>ON<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-DPMT_BUILD_ROCM<span class="o">=</span>ON<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-DCMAKE_C_COMPILER<span class="o">=</span>gcc<span class="w"> </span><span class="se">\</span>
